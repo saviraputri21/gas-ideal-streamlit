@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 st.set_page_config(page_title="Kalkulator Gas Ideal", page_icon="🧪", layout="centered")
 
 # Sidebar Navigasi
-menu = st.sidebar.selectbox("📂 Pilih Halaman", ["🏠 Home", "📊 Dashboard", "🧮 Kalkulator"])
+menu = st.sidebar.selectbox("📂 Pilih Halaman", ["🏠 Home", "📊 Dashboard", "🧮 Kalkulator","Tentang Kami"])
 
 # ================================
 # 🏠 HOME PAGE
@@ -82,6 +82,9 @@ elif menu == "📊 Dashboard":
 
     🔍 Catatan: Tidak ada gas yang 100% ideal di dunia nyata, namun model ini sangat berguna dalam ilmu kimia dan fisika!
     """)
+# ================================
+# 📊 Tentang Kami
+# ================================
 elif menu == "👥 Tentang Kami":
     st.title("👥 Tentang Kami")
     st.markdown("""
