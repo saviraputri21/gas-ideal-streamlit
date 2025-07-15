@@ -33,23 +33,57 @@ if menu == "🏠 Home":
 # 📊 DASHBOARD PAGE
 # ================================
 elif menu == "📊 Dashboard":
-    st.title("📊 Dashboard: Hukum Boyle (P ∝ 1/V)")
-    st.markdown("Menunjukkan hubungan **tekanan** dan **volume** saat **jumlah mol** dan **suhu tetap**.")
+    st.title("📚 Penjelasan Gas Ideal")
 
-    # Data simulasi hukum Boyle
-    data = pd.DataFrame({
-        "Volume (L)": [1, 2, 3, 4, 5],
-        "Tekanan (atm)": [5, 2.5, 1.67, 1.25, 1.0]
-    })
+    st.markdown("""
+    ## 🌬️ Apa itu Gas Ideal?
 
-    fig, ax = plt.subplots()
-    ax.plot(data["Volume (L)"], data["Tekanan (atm)"], marker='o', color='teal')
-    ax.set_xlabel("Volume (L)")
-    ax.set_ylabel("Tekanan (atm)")
-    ax.set_title("Grafik Tekanan vs Volume (Boyle's Law)")
-    st.pyplot(fig)
+    Gas ideal adalah model teoretis dari gas yang mengikuti persamaan **PV = nRT**, di mana:
+    - **Partikel gas dianggap tidak memiliki volume**
+    - **Tidak ada gaya tarik-menarik antar partikel**
+    - Semua tumbukan antar partikel bersifat **lenting sempurna**
 
-    st.info("Tekanan menurun saat volume bertambah, sesuai hukum Boyle.")
+    Model ini digunakan untuk menyederhanakan perhitungan dan memahami sifat-sifat gas secara umum.
+
+    ---
+
+    ## 📏 Hukum-Hukum dalam Gas Ideal
+
+    **1. Hukum Boyle**  
+    Pada suhu tetap, volume berbanding terbalik dengan tekanan.  
+    \[
+    P \propto \frac{1}{V}
+    \]
+
+    **2. Hukum Charles**  
+    Pada tekanan tetap, volume berbanding lurus dengan suhu.  
+    \[
+    V \propto T
+    \]
+
+    **3. Hukum Gay-Lussac**  
+    Pada volume tetap, tekanan berbanding lurus dengan suhu.  
+    \[
+    P \propto T
+    \]
+
+    ---
+
+    ## ⚛️ Sifat-Sifat Gas Ideal
+
+    1. Partikel bergerak secara acak dalam semua arah  
+    2. Tidak ada gaya tarik menarik antar molekul  
+    3. Ukuran partikel dianggap sangat kecil (diabaikan)  
+    4. Partikel terdistribusi merata dalam ruang  
+    5. Tumbukan antar partikel adalah lenting sempurna  
+    6. Energi kinetik rata-rata sebanding dengan suhu
+
+    ---
+
+    🔍 Catatan: Tidak ada gas yang 100% ideal di dunia nyata, namun model ini sangat berguna dalam ilmu kimia dan fisika!
+    """)
+
+
 
 # ================================
 # 🧮 KALKULATOR PAGE
