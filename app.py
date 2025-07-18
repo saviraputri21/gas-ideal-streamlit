@@ -19,11 +19,11 @@ if menu == "🏠 Home":
     PV = nRT
     \]
 
-    - **P**: Tekanan (atm)  
-    - **V**: Volume (L)  
-    - **n**: Jumlah mol  
-    - **R**: 0.0821 L·atm/mol·K  
-    - **T**: Suhu (K)
+    - P : Tekanan (atm)  
+    - V : Volume (L)  
+    - n : Jumlah mol  
+    - R : 0.0821 L·atm/mol·K  
+    - T: Suhu (K)
 
     Aplikasi ini membantu menghitung salah satu variabel jika tiga lainnya diketahui.
     """)
@@ -101,22 +101,24 @@ elif menu == "👥 Tentang Kami":
     Nama PV-nRTin Aja kami pilih bukan cuma biar catchy, tapi juga sebagai ajakan:
     💬 nggak usah ribet, tinggal masukin data... terus “PV-nRTin Aja”! 🚀
     
-    Dengan tampilan simpel, sederhana, dan nuansa khas anak sains dan teknik, kami ingin bantu kamu belajar dengan cara yang praktik🎯
+    Dengan tampilan simpel dan nuansa khas anak sains dan teknik, kami ingin bantu kamu belajar dengan cara yang praktis🎯
     
     Karena hidup udah cukup berat...
     
     📌 Jangan biarkan tekanan gas ikut bikin tekanan batin 🤖💨
 
-    *Kelompok 2*
-    Nama Anggota :
-    - Dhelis 
-    - Ismi Aziz
-    - Mutia Ningrum
-    - Savira Putri Pramudita (2460514)
-    - Azka 
+   📘 Disusun oleh: Kelompok 2
 
-    Terima kasih telah menggunakan aplikasi kami!  
-    Kami berharap aplikasi ini membantu dalam belajar dan mengerjakan tugas-tugas fisika atau kimia Anda.
+   Terima kasih atas kunjungan dan kepercayaan Anda menggunakan aplikasi ini.
+   Kami berharap aplikasi yang kami kembangkan dapat memberikan kemudahan dalam memahami konsep Hukum Gas Ideal
+   serta membantu menghitung gas ideal.
+   ---
+   👥 Anggota Kelompok:
+   - Dhelis
+   - Ismil Aziz
+   - Mutia Ningrum
+   - Savira Putri Pramudita
+   - Azka
     """)
 
 # ================================
