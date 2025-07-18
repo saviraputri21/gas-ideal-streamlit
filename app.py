@@ -39,8 +39,8 @@ elif menu == "📊 Dashboard":
     ## 🌬️ Apa itu Gas Ideal?
 
     Gas ideal adalah model teoretis dari gas yang mengikuti persamaan **PV = nRT**, di mana:
-    - **Partikel gas dianggap tidak memiliki volume**
-    - **Tidak ada gaya tarik-menarik antar partikel**
+    - Partikel gas dianggap tidak memiliki volume
+    - Tidak ada gaya tarik-menarik antar partikel
     - Semua tumbukan antar partikel bersifat **lenting sempurna**
 
     Model ini digunakan untuk menyederhanakan perhitungan dan memahami sifat-sifat gas secara umum.
@@ -91,21 +91,31 @@ elif menu == "👥 Tentang Kami":
     st.markdown("""
     ### Tim Pengembang Aplikasi Kalkulator Gas Ideal
 
-    Tentang Kami 👥
+
     Selamat datang di PV-nRTin Aja! 💻🧪
+    
     Sebuah platform kalkulator gas ideal yang dibuat untuk mahasiswa, pelajar, atau pejuang tugas akhir—yang sering berkutat dengan rumus legendaris PV = nRT 😵‍💫
+    
     Di dunia teknik dan sains, perhitungan gas ideal itu penting banget, tapi jujur aja... kadang ribet 😅. 
+    
     Nah, di sinilah kami hadir: biar kamu bisa fokus ke konsepnya, dan biarkan sistem kami yang ngurusin hitung-hitungan nya ✨📊
+    
     Nama PV-nRTin Aja kami pilih bukan cuma biar catchy, tapi juga sebagai ajakan:
-    💬 nggak usah ribet, tinggal masukin data... terus tinggalin ke kami — tinggal “PV-nRTin Aja”! 🚀
+    
+    💬 nggak usah ribet, tinggal masukin data... terus “PV-nRTin Aja”! 🚀
+    
     Dengan tampilan simpel, fitur akurat, dan nuansa khas anak teknik, kami ingin bantu kamu belajar dengan cara yang ringan tapi tetap tepat 🎯
+    
     Karena hidup udah cukup berat...
+    
     📌 Jangan biarkan tekanan gas ikut bikin tekanan batin 🤖💨
 
-    **Kontak:**
-    - Email: info@example.com
-    - Website: [www.example.com](https://www.example.com)
-    - Instagram: [@example](https://instagram.com/example)
+    ** Nama Kelompok 2:**
+    - Dhelis 
+    - Ismi Aziz
+    - Mutia Ningrum
+    - Savira Putri Pramudita 
+    - Azka 
 
     Terima kasih telah menggunakan aplikasi kami!  
     Kami berharap aplikasi ini membantu dalam belajar dan mengerjakan tugas-tugas fisika atau kimia Anda.
