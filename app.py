@@ -91,7 +91,7 @@ elif menu == "👥 Tentang Kami":
     st.markdown("""
     ### Tim Pengembang Aplikasi Kalkulator Gas Ideal
 
-    Tentang Kami ⚙️📐
+    Tentang Kami 👥
     Selamat datang di PV-nRTin Aja! 💻🧪
     Sebuah platform kalkulator gas ideal yang dibuat untuk mahasiswa, pelajar, atau pejuang tugas akhir—yang sering berkutat dengan rumus legendaris PV = nRT 😵‍💫
     Di dunia teknik dan sains, perhitungan gas ideal itu penting banget, tapi jujur aja... kadang ribet 😅. 
@@ -109,10 +109,7 @@ elif menu == "👥 Tentang Kami":
 
     Terima kasih telah menggunakan aplikasi kami!  
     Kami berharap aplikasi ini membantu dalam belajar dan mengerjakan tugas-tugas fisika atau kimia Anda.
-    ...
     """)
-
-
 
 # ================================
 # 🧮 KALKULATOR PAGE
