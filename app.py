@@ -51,10 +51,9 @@ elif menu == "📊 Dashboard":
 
     **1. Hukum Boyle**  
     Pada suhu tetap, volume berbanding terbalik dengan tekanan.  
-    \[
     PV = Konstan
+    
     P1.V1 = P2.V2
-    \]
 
     **2. Hukum Charles**  
     Pada tekanan tetap, volume berbanding lurus dengan suhu.  
@@ -113,11 +112,13 @@ elif menu == "👥 Tentang Kami":
    serta membantu menghitung gas ideal.
    
    📘Disusun oleh Kelompok 2
-     Anggota Kelompok: - Dhelis
-                       - Ismil Aziz
-                       - Mutia Ningrum
-                       - Savira Putri Pramudita
-                       - Azka
+   
+     Anggota Kelompok: 
+     -Dhelis
+     -Ismil Aziz
+     -Mutia Ningrum
+     -Savira Putri Pramudita
+     -Azka
     """)
 
 # ================================
