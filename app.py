@@ -109,6 +109,7 @@ elif menu == "👥 Tentang Kami":
 
     Terima kasih telah menggunakan aplikasi kami!  
     Kami berharap aplikasi ini membantu dalam belajar dan mengerjakan tugas-tugas fisika atau kimia Anda.
+    ...
     """)
 
 
