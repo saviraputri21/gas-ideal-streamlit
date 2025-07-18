@@ -41,7 +41,7 @@ elif menu == "📊 Dashboard":
     Gas ideal adalah model teoretis dari gas yang mengikuti persamaan **PV = nRT**, di mana:
     - Partikel gas dianggap tidak memiliki volume
     - Tidak ada gaya tarik-menarik antar partikel
-    - Semua tumbukan antar partikel bersifat **lenting sempurna**
+    - Semua tumbukan antar partikel bersifat lenting sempurna
 
     Model ini digunakan untuk menyederhanakan perhitungan dan memahami sifat-sifat gas secara umum.
 
@@ -73,7 +73,7 @@ elif menu == "📊 Dashboard":
 
     1. Partikel bergerak secara acak dalam semua arah  
     2. Tidak ada gaya tarik menarik antar molekul  
-    3. Ukuran partikel dianggap sangat kecil (diabaikan)  
+    3. Ukuran partikel sangat kecil 
     4. Partikel terdistribusi merata dalam ruang  
     5. Tumbukan antar partikel adalah lenting sempurna  
     6. Energi kinetik rata-rata sebanding dengan suhu
@@ -95,26 +95,24 @@ elif menu == "👥 Tentang Kami":
     Selamat datang di PV-nRTin Aja! 💻🧪
     
     Sebuah platform kalkulator gas ideal yang dibuat untuk mahasiswa, pelajar, atau pejuang tugas akhir—yang sering berkutat dengan rumus legendaris PV = nRT 😵‍💫
-    
     Di dunia teknik dan sains, perhitungan gas ideal itu penting banget, tapi jujur aja... kadang ribet 😅. 
     
     Nah, di sinilah kami hadir: biar kamu bisa fokus ke konsepnya, dan biarkan sistem kami yang ngurusin hitung-hitungan nya ✨📊
-    
     Nama PV-nRTin Aja kami pilih bukan cuma biar catchy, tapi juga sebagai ajakan:
-    
     💬 nggak usah ribet, tinggal masukin data... terus “PV-nRTin Aja”! 🚀
     
-    Dengan tampilan simpel, fitur akurat, dan nuansa khas anak teknik, kami ingin bantu kamu belajar dengan cara yang ringan tapi tetap tepat 🎯
+    Dengan tampilan simpel, sederhana, dan nuansa khas anak sains dan teknik, kami ingin bantu kamu belajar dengan cara yang praktik🎯
     
     Karena hidup udah cukup berat...
     
     📌 Jangan biarkan tekanan gas ikut bikin tekanan batin 🤖💨
 
-    ** Nama Kelompok 2:**
+    *Kelompok 2*
+    Nama Anggota :
     - Dhelis 
     - Ismi Aziz
     - Mutia Ningrum
-    - Savira Putri Pramudita 
+    - Savira Putri Pramudita (2460514)
     - Azka 
 
     Terima kasih telah menggunakan aplikasi kami!  
