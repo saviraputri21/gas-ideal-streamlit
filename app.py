@@ -54,22 +54,20 @@ elif menu == "📊 Dashboard":
     Pada suhu tetap, volume berbanding terbalik dengan tekanan.  
     PV = Konstan
     \[
-    P1.V1 = P2.V2
+      P1.V1 = P2.V2
     \]
 
     **2. Hukum Charles**  
     Pada tekanan tetap, volume berbanding lurus dengan suhu.  
-    VT = Konstan 
-    \]
-    V1/T1 = V2/T2
-    \]
+    VT = Konstan
+     \[
+      V1/T1 = V2/T2
+     \]
 
     **3. Hukum Gay-Lussac**  
     Pada volume tetap, tekanan berbanding lurus dengan suhu.  
     P/T = Konstan
-    \[
     P1/T1 = P2/T2
-    \]
      
     ---
 
@@ -118,11 +116,11 @@ elif menu == "👥 Tentang Kami":
    📘**Disusun oleh Kelompok 2**
    
    **Anggota Kelompok:** 
-   - Dhelis
-   - Ismil Aziz
-   - Mutia Ningrum
-   - Savira Putri Pramudita
-   - Azka
+   - Azka Afriyuni Suwito (2360084)
+   - Dhelys Kusuma Wardani (2460356)
+   - Ismi Aziz(2460393)
+   - Mutia Ningrum (2460444)
+   - Savira Putri Pramudita (2460514)
    
     """)
 
