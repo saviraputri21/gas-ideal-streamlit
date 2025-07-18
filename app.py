@@ -16,14 +16,15 @@ if menu == "🏠 Home":
     st.markdown(r"""
     ## Persamaan Gas Ideal
     \[
-    PV = nRT
+    **PV = nRT**
     \]
-
+    
+    Keterangan
     - P : Tekanan (atm)  
     - V : Volume (L)  
     - n : Jumlah mol  
     - R : 0.0821 L·atm/mol·K  
-    - T: Suhu (K)
+    - T : Suhu (K)
 
     Aplikasi ini membantu menghitung salah satu variabel jika tiga lainnya diketahui.
     """)
@@ -52,22 +53,24 @@ elif menu == "📊 Dashboard":
     **1. Hukum Boyle**  
     Pada suhu tetap, volume berbanding terbalik dengan tekanan.  
     PV = Konstan
-    
+    \[
     P1.V1 = P2.V2
+    \]
 
     **2. Hukum Charles**  
     Pada tekanan tetap, volume berbanding lurus dengan suhu.  
     VT = Konstan 
-    
+    \]
     V1/T1 = V2/T2
-  
+    \]
 
     **3. Hukum Gay-Lussac**  
     Pada volume tetap, tekanan berbanding lurus dengan suhu.  
     P/T = Konstan
-    
+    \[
     P1/T1 = P2/T2
-
+    \]
+     
     ---
 
     ## ⚛️ Sifat-Sifat Gas Ideal
@@ -112,18 +115,15 @@ elif menu == "👥 Tentang Kami":
    Kami berharap aplikasi yang kami kembangkan dapat memberikan kemudahan dalam memahami konsep Hukum Gas Ideal
    serta membantu menghitung gas ideal.
    
-   📘Disusun oleh Kelompok 2
+   📘**Disusun oleh Kelompok 2**
    
-   Anggota Kelompok: 
+   **Anggota Kelompok:** 
    - Dhelis
+   - Ismil Aziz
+   - Mutia Ningrum
+   - Savira Putri Pramudita
+   - Azka
    
-   -Ismil Aziz
-   
-   -Mutia Ningrum
-   
-   -Savira Putri Pramudita
-   
-   -Azka
     """)
 
 # ================================
