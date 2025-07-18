@@ -84,7 +84,7 @@ elif menu == "📊 Dashboard":
     """)
     
 # ================================
-# 📊 Tentang Kami
+# Tentang Kami
 # ================================
 elif menu == "👥 Tentang Kami":
     st.title("👥 Tentang Kami")
