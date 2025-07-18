@@ -53,31 +53,17 @@ elif menu == "📊 Dashboard":
     **1. Hukum Boyle**  
     Pada suhu tetap, volume berbanding terbalik dengan tekanan.  
     PV = Konstan
-    st.latex(r"P_1 \cdot V_1 = P_2 \cdot V_2")
+    P1.V1 = P2.V2
     
     **2. Hukum Charles**  
     Pada tekanan tetap, volume berbanding lurus dengan suhu.  
-    VT = Konstan
-     \[
+      VT = Konstan
       V1/T1 = V2/T2
-     \]
 
     **3. Hukum Gay-Lussac**  
     Pada volume tetap, tekanan berbanding lurus dengan suhu.  
-    P/T = Konstan
-    P1/T1 = P2/T2
-
-    st.markdown("### 1. Hukum Boyle")
-    st.markdown("Pada suhu tetap, volume gas berbanding terbalik dengan tekanannya. (PV = konstan)")
-    st.latex(r"P_1 \cdot V_1 = P_2 \cdot V_2")
-
-    st.markdown("### 2. Hukum Charles")
-    st.markdown("Pada tekanan tetap, volume gas berbanding lurus dengan suhu mutlaknya. (V/T = konstan)")
-    st.latex(r"\frac{V_1}{T_1} = \frac{V_2}{T_2}")
-
-    st.markdown("### 3. Hukum Gay-Lussac")
-    st.markdown("Pada volume tetap, tekanan gas berbanding lurus dengan suhu mutlaknya. (P/T = konstan)")
-    st.latex(r"\frac{P_1}{T_1} = \frac{P_2}{T_2}")
+      P/T = Konstan
+      st.latex(P1/T1 = P2/T2)
      
     ---
 
