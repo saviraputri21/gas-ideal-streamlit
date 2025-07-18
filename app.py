@@ -53,17 +53,20 @@ elif menu == "📊 Dashboard":
     **1. Hukum Boyle**  
     Pada suhu tetap, volume berbanding terbalik dengan tekanan.  
     PV = Konstan
+    
     P1.V1 = P2.V2
     
     **2. Hukum Charles**  
     Pada tekanan tetap, volume berbanding lurus dengan suhu.  
       VT = Konstan
+      
       V1/T1 = V2/T2
 
     **3. Hukum Gay-Lussac**  
     Pada volume tetap, tekanan berbanding lurus dengan suhu.  
       P/T = Konstan
-      st.latex(P1/T1 = P2/T2)
+      
+      (P1/T1 = P2/T2)
      
     ---
 
