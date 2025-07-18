@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 st.set_page_config(page_title="Kalkulator Gas Ideal", page_icon="🧪", layout="centered")
 
 # Sidebar Navigasi
-menu = st.sidebar.selectbox("📂 Pilih Halaman", ["🏠 Home", "📊 Dashboard", "🧮 Kalkulator","👥Tentang Kami"])
+menu = st.sidebar.selectbox("📂 Pilih Halaman", ["🏠 Home", "📊 Dashboard", "🧮 Kalkulator","👥 Tentang Kami"])
 
 # ================================
 # 🏠 HOME PAGE
@@ -84,7 +84,7 @@ elif menu == "📊 Dashboard":
     """)
     
 # ================================
-# 👥Tentang Kami
+# 👥 Tentang Kami
 # ================================
 elif menu == "👥 Tentang Kami":
     st.title("👥 Tentang Kami")
