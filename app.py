@@ -173,4 +173,16 @@ elif menu == "🧾 Breakdown Perhitungan":
                 result = (P * V) / (R * T)
                 st.latex(f"n = \\frac{{{{{P} × {V}}}}}{{{{{R} × {T}}}}} = {result:.3f} \\ mol")
                 st.success(f"✅ Jumlah mol (n) = {result:.3f} mol")
-            
+            elif T == 0:
+                st.latex("PV = nRT")
+                st.markdown(f"""
+                Nilai yang diketahui:
+                - P = {P} atm  
+                - V = {V} L  
+                - n = {n} mol  
+                - R = 0.0821 L·atm/mol·K  
+                """)
+                st.latex("T = \\frac{{PV}}{{nR}}")
+                T = (P * V) / (n * R)
+                st.latex(f"T = \\frac{{{P} × {V}}}{{{n} × {R}}} = {T:.2f} \\ K")
+                st.success(f"✅ Suhu (T) = {T:.2f} K")
