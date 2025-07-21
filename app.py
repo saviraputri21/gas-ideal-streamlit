@@ -4,7 +4,7 @@ import streamlit as st
 st.set_page_config(page_title="Kalkulator Gas Ideal", page_icon="🧪", layout="centered")
 
 # Sidebar Navigasi
-menu = st.sidebar.selectbox("📂 Pilih Halaman", ["🏠 Home", "📊 Dashboard", "🧮 Kalkulator","📉 Breakdown Perhitungan","👥 Tentang Kami"])
+menu = st.sidebar.selectbox("📂 Pilih Halaman", ["🏠 Home", "📊 Dashboard", "🧮 Kalkulator dan Breakdown Perhitungan","👥 Tentang Kami"])
 
 # ================================
 # 🏠 HOME PAGE
@@ -122,38 +122,7 @@ elif menu == "👥 Tentang Kami":
     """)
 
 # ================================
-# 🧮 KALKULATOR PAGE
-# ================================
-elif menu == "🧮 Kalkulator":
-    st.title("🧮 Kalkulator Gas Ideal (PV = nRT)")
-    st.markdown("Masukkan **3 variabel** dan kosongkan **1 variabel** dengan mengisi angka 0 (nol).")
-
-    # Input user
-    P = st.number_input("Tekanan (P) dalam atm", value=0.0)
-    V = st.number_input("Volume (V) dalam liter", value=0.0)
-    n = st.number_input("Jumlah mol (n)", value=0.0)
-    T = st.number_input("Suhu (T) dalam Kelvin", value=0.0)
-    R = 0.0821
-
-    if st.button("Hitung"):
-        if P == 0 and V > 0 and n > 0 and T > 0:
-            P = (n * R * T) / V
-            st.success(f"Tekanan (P) = {P:.3f} atm")
-        elif V == 0 and P > 0 and n > 0 and T > 0:
-            V = (n * R * T) / P
-            st.success(f"Volume (V) = {V:.3f} liter")
-        elif n == 0 and P > 0 and V > 0 and T > 0:
-            n = (P * V) / (R * T)
-            st.success(f"Jumlah mol (n) = {n:.3f} mol")
-        elif T == 0 and P > 0 and V > 0 and n > 0:
-            T = (P * V) / (n * R)
-            st.success(f"Suhu (T) = {T:.2f} K")
-        else:
-            st.error("Isi *tepat satu* variabel dengan 0 dan sisanya dengan nilai valid (> 0).")
-
-    st.caption("Menggunakan konstanta gas R = 0.0821 L·atm/mol·K")
-    # ================================
-# 📉 BREAKDOWN PERHITUNGAN
+# "🧮 Kalkulator dan Breakdown Perhitungan
 # ================================
 elif menu == "📉 Breakdown Perhitungan":
     st.title("📉 Breakdown Perhitungan Gas Ideal")
