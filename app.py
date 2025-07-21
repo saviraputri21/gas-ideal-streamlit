@@ -56,7 +56,6 @@ if menu == "🏠 Home":
 
     Aplikasi ini membantu menghitung salah satu variabel jika tiga lainnya diketahui.
     """)
-    st.info("Pilih halaman di sidebar untuk menggunakan kalkulator atau melihat grafik hubungan volume & tekanan.")
 
 # ====================================
 # 📊 DASHBOARD
