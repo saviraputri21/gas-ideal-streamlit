@@ -186,3 +186,39 @@ elif menu == "🧾 Breakdown Perhitungan":
                 T = (P * V) / (n * R)
                 st.latex(f"T = \\frac{{{P} × {V}}}{{{n} × {R}}} = {T:.2f} \\ K")
                 st.success(f"✅ Suhu (T) = {T:.2f} K")
+    # ================================
+    # 👥 Tentang Kami
+    # ================================
+        elif menu == "👥 Tentang Kami":
+            st.title("👥 Tentang Kami")
+            st.markdown("""
+            ### Tim Pengembang Aplikasi Kalkulator Gas Ideal
+        
+        
+            Selamat datang di PV-nRTin Aja! 💻🧪
+            
+            Sebuah platform kalkulator gas ideal yang dibuat untuk mahasiswa, pelajar, atau pejuang tugas akhir—yang sering berkutat dengan rumus legendaris PV = nRT 😵‍💫
+            Di dunia teknik dan sains, perhitungan gas ideal itu penting banget, tapi jujur aja... kadang ribet 😅. 
+            
+            Nah, di sinilah kami hadir: biar kamu bisa fokus ke konsepnya, dan biarkan sistem kami yang ngurusin hitung-hitungan nya ✨📊
+            Nama PV-nRTin Aja kami pilih bukan cuma biar catchy, tapi juga sebagai ajakan:
+            💬 nggak usah ribet, tinggal masukin data... terus “PV-nRTin Aja”! 🚀
+            
+            Dengan tampilan simpel dan nuansa khas anak sains dan teknik, kami ingin bantu kamu belajar dengan cara yang praktis🎯
+            
+            Karena hidup udah cukup berat...
+            
+            📌 Jangan biarkan tekanan gas ikut bikin tekanan batin 🤖💨
+        
+           Terima kasih atas kunjungan dan kepercayaan Anda menggunakan aplikasi ini.
+           Kami berharap aplikasi yang kami kembangkan dapat memberikan kemudahan dalam memahami konsep Hukum Gas Ideal
+           serta membantu menghitung gas ideal.
+           
+           📘*Disusun oleh Kelompok 2*
+   
+           *Anggota Kelompok:* 
+           - Azka Afriyuni Suwito (2360084)
+           - Dhelys Kusuma Wardani (2460356)
+           - Ismi Aziz(2460393)
+           - Mutia Ningrum (2460444)
+           - Savira Putri Pramudita (2460514)
