@@ -167,10 +167,11 @@ elif menu == "🧾 Breakdown Perhitungan":
                 result = (n * R * T) / P
                 st.latex(f"V = \\frac{{{n} × {R} × {T}}}{{{P}}} = {result:.3f} \\ liter")
                 st.success(f"✅ Volume (V) = {result:.3f} liter")
-
             elif n == 0:
                 st.latex("PV = nRT")
                 st.markdown(f"P = {P}, V = {V}, R = 0.0821, T = {T}")
                 st.latex("n = \\frac{PV}{RT}")
                 result = (P * V) / (R * T)
-                st.latex(f"n = \\frac{{{P} × {V}}}{{{R} × {T}}} = {result:.3f}
+                st.latex(f"n = \\frac{{{{{P} × {V}}}}}{{{{{R} × {T}}}}} = {result:.3f} \\ mol")
+                st.success(f"✅ Jumlah mol (n) = {result:.3f} mol")
+            
