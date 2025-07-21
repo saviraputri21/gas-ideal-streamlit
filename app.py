@@ -4,86 +4,29 @@ import streamlit as st
 st.set_page_config(page_title="Kalkulator Gas Ideal", page_icon="🧪", layout="centered")
 
 # Sidebar Navigasi
-menu = st.sidebar.selectbox("📂 Pilih Halaman", ["🏠 Home", "📊 Dashboard", "🧮 Kalkulator","👥 Tentang Kami"])
+menu = st.sidebar.selectbox("📂 Pilih Halaman", ["🏠 Home", "📊 Dashboard", "🧮 Kalkulator","📉 Breakdown Perhitungan","👥 Tentang Kami"])
 
 # ================================
 # 🏠 HOME PAGE
-elif menu == "🧾 Breakdown Perhitungan":
-    st.title("🧾 Breakdown Perhitungan Gas Ideal (PV = nRT)")
-    st.markdown("Masukkan **3 variabel** dan kosongkan **1 variabel** dengan mengisi angka 0 (nol). Sistem akan menampilkan langkah perhitungannya.")
+# ================================
+if menu == "🏠 Home":
+    st.title("🧪 Aplikasi Kalkulator Gas Ideal")
+    st.markdown(r"""
+    ## Persamaan Gas Ideal
+    \[
+    **PV = nRT**
+    \]
+    
+    Keterangan
+    - P : Tekanan (atm)  
+    - V : Volume (L)  
+    - n : Jumlah mol  
+    - R : 0.0821 L·atm/mol·K  
+    - T : Suhu (K)
 
-    # Input user
-    P = st.number_input("Tekanan (P) dalam atm", value=0.0, key="bp_P")
-    V = st.number_input("Volume (V) dalam liter", value=0.0, key="bp_V")
-    n = st.number_input("Jumlah mol (n)", value=0.0, key="bp_n")
-    T = st.number_input("Suhu (T) dalam Kelvin", value=0.0, key="bp_T")
-    R = 0.0821
-
-    if st.button("Tampilkan Breakdown"):
-        zero_count = sum([P == 0, V == 0, n == 0, T == 0])
-        if zero_count != 1:
-            st.error("Tolong kosongkan tepat satu variabel (isi dengan 0), dan isi 3 variabel lainnya dengan nilai > 0.")
-        else:
-            st.subheader("🔍 Langkah-Langkah Perhitungan")
-
-            if P == 0:
-                st.latex("PV = nRT")
-                st.markdown(f"""
-                Nilai yang diketahui:
-                - n = {n} mol  
-                - R = 0.0821 L·atm/mol·K  
-                - T = {T} K  
-                - V = {V} L  
-                """)
-                st.latex("P = \\frac{{nRT}}{{V}}")
-                P = (n * R * T) / V
-                st.latex(f"P = \\frac{{{n} × {R} × {T}}}{{{V}}} = {P:.3f} \\ atm")
-                st.success(f"✅ Tekanan (P) = {P:.3f} atm")
-
-            elif V == 0:
-                st.latex("PV = nRT")
-                st.markdown(f"""
-                Nilai yang diketahui:
-                - n = {n} mol  
-                - R = 0.0821 L·atm/mol·K  
-                - T = {T} K  
-                - P = {P} atm  
-                """)
-                st.latex("V = \\frac{{nRT}}{{P}}")
-                V = (n * R * T) / P
-                st.latex(f"V = \\frac{{{n} × {R} × {T}}}{{{P}}} = {V:.3f} \\ liter")
-                st.success(f"✅ Volume (V) = {V:.3f} liter")
-
-            elif n == 0:
-                st.latex("PV = nRT")
-                st.markdown(f"""
-                Nilai yang diketahui:
-                - P = {P} atm  
-                - V = {V} L  
-                - R = 0.0821 L·atm/mol·K  
-                - T = {T} K  
-                """)
-                st.latex("n = \\frac{{PV}}{{RT}}")
-                n = (P * V) / (R * T)
-                st.latex(f"n = \\frac{{{P} × {V}}}{{{R} × {T}}} = {n:.3f} \\ mol")
-                st.success(f"✅ Jumlah mol (n) = {n:.3f} mol")
-
-            elif T == 0:
-                st.latex("PV = nRT")
-                st.markdown(f"""
-                Nilai yang diketahui:
-                - P = {P} atm  
-                - V = {V} L  
-                - n = {n} mol  
-                - R = 0.0821 L·atm/mol·K  
-                """)
-                st.latex("T = \\frac{{PV}}{{nR}}")
-                T = (P * V) / (n * R)
-                st.latex(f"T = \\frac{{{P} × {V}}}{{{n} × {R}}} = {T:.2f} \\ K")
-                st.success(f"✅ Suhu (T) = {T:.2f} K")
-
-    st.caption("Breakdown ditampilkan berdasarkan persamaan PV = nRT dengan konstanta R = 0.0821 L·atm/mol·K")
-
+    Aplikasi ini membantu menghitung salah satu variabel jika tiga lainnya diketahui.
+    """)
+    st.info("Pilih halaman di sidebar untuk menggunakan kalkulator atau melihat grafik hubungan volume & tekanan.")
 
 # ================================
 # 📊 DASHBOARD PAGE
@@ -144,7 +87,7 @@ elif menu == "📊 Dashboard":
 # ================================
 elif menu == "👥 Tentang Kami":
     st.title("👥 Tentang Kami")
-
+    st.markdown("""
     ### Tim Pengembang Aplikasi Kalkulator Gas Ideal
 
 
@@ -209,3 +152,53 @@ elif menu == "🧮 Kalkulator":
             st.error("Isi *tepat satu* variabel dengan 0 dan sisanya dengan nilai valid (> 0).")
 
     st.caption("Menggunakan konstanta gas R = 0.0821 L·atm/mol·K")
+    # ================================
+# 📉 BREAKDOWN PERHITUNGAN
+# ================================
+elif menu == "📉 Breakdown Perhitungan":
+    st.title("📉 Breakdown Perhitungan Gas Ideal")
+    st.markdown("Masukkan **3 variabel** dan pilih variabel yang ingin dihitung. Kami akan menunjukkan proses perhitungannya secara langkah-demi-langkah.")
+    
+    option = st.selectbox("Variabel yang akan dihitung", ["Tekanan (P)", "Volume (V)", "Jumlah mol (n)", "Suhu (T)"])
+    
+    # Input sesuai pilihan
+    if option != "Tekanan (P)":
+        P = st.number_input("Tekanan (P) dalam atm", min_value=0.001, format="%.4f")
+    if option != "Volume (V)":
+        V = st.number_input("Volume (V) dalam liter", min_value=0.001, format="%.4f")
+    if option != "Jumlah mol (n)":
+        n = st.number_input("Jumlah mol (n)", min_value=0.001, format="%.4f")
+    if option != "Suhu (T)":
+        T = st.number_input("Suhu (T) dalam Kelvin", min_value=0.001, format="%.4f")
+
+    R = 0.0821
+
+    if st.button("Tampilkan Breakdown"):
+        st.markdown("### 🧾 Langkah-langkah Perhitungan:")
+
+        if option == "Tekanan (P)":
+            st.latex("P = \\frac{nRT}{V}")
+            st.write(f"1. Masukkan nilai: P = ({n} mol) x ({R} L·atm/mol·K) x ({T} K) / ({V} L)")
+            hasil = (n * R * T) / V
+            st.write(f"2. Hitung: P = {n * R * T:.4f} / {V} = **{hasil:.4f} atm**")
+
+        elif option == "Volume (V)":
+            st.latex("V = \\frac{nRT}{P}")
+            st.write(f"1. Masukkan nilai: V = ({n} mol) x ({R} L·atm/mol·K) x ({T} K) / ({P} atm)")
+            hasil = (n * R * T) / P
+            st.write(f"2. Hitung: V = {n * R * T:.4f} / {P} = **{hasil:.4f} L**")
+
+        elif option == "Jumlah mol (n)":
+            st.latex("n = \\frac{PV}{RT}")
+            st.write(f"1. Masukkan nilai: n = ({P} atm) x ({V} L) / ({R} L·atm/mol·K x {T} K)")
+            hasil = (P * V) / (R * T)
+            st.write(f"2. Hitung: n = {P * V:.4f} / {R * T:.4f} = **{hasil:.4f} mol**")
+
+        elif option == "Suhu (T)":
+            st.latex("T = \\frac{PV}{nR}")
+            st.write(f"1. Masukkan nilai: T = ({P} atm) x ({V} L) / ({n} mol x {R} L·atm/mol·K)")
+            hasil = (P * V) / (n * R)
+            st.write(f"2. Hitung: T = {P * V:.4f} / {n * R:.4f} = **{hasil:.2f} K**")
+
+        st.success("✅ Perhitungan berhasil ditampilkan.")
+        st.caption("Konstanta gas R = 0.0821 L·atm/mol·K")
