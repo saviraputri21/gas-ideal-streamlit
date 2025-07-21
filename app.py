@@ -1,6 +1,4 @@
 import streamlit as st
-import pandas as pd
-import matplotlib.pyplot as plt
 
 # Konfigurasi halaman
 st.set_page_config(page_title="Kalkulator Gas Ideal", page_icon="🧪", layout="centered")
@@ -10,25 +8,82 @@ menu = st.sidebar.selectbox("📂 Pilih Halaman", ["🏠 Home", "📊 Dashboard"
 
 # ================================
 # 🏠 HOME PAGE
-# ================================
-if menu == "🏠 Home":
-    st.title("🧪 Aplikasi Kalkulator Gas Ideal")
-    st.markdown(r"""
-    ## Persamaan Gas Ideal
-    \[
-    **PV = nRT**
-    \]
-    
-    Keterangan
-    - P : Tekanan (atm)  
-    - V : Volume (L)  
-    - n : Jumlah mol  
-    - R : 0.0821 L·atm/mol·K  
-    - T : Suhu (K)
+elif menu == "🧾 Breakdown Perhitungan":
+    st.title("🧾 Breakdown Perhitungan Gas Ideal (PV = nRT)")
+    st.markdown("Masukkan **3 variabel** dan kosongkan **1 variabel** dengan mengisi angka 0 (nol). Sistem akan menampilkan langkah perhitungannya.")
 
-    Aplikasi ini membantu menghitung salah satu variabel jika tiga lainnya diketahui.
-    """)
-    st.info("Pilih halaman di sidebar untuk menggunakan kalkulator atau melihat grafik hubungan volume & tekanan.")
+    # Input user
+    P = st.number_input("Tekanan (P) dalam atm", value=0.0, key="bp_P")
+    V = st.number_input("Volume (V) dalam liter", value=0.0, key="bp_V")
+    n = st.number_input("Jumlah mol (n)", value=0.0, key="bp_n")
+    T = st.number_input("Suhu (T) dalam Kelvin", value=0.0, key="bp_T")
+    R = 0.0821
+
+    if st.button("Tampilkan Breakdown"):
+        zero_count = sum([P == 0, V == 0, n == 0, T == 0])
+        if zero_count != 1:
+            st.error("Tolong kosongkan tepat satu variabel (isi dengan 0), dan isi 3 variabel lainnya dengan nilai > 0.")
+        else:
+            st.subheader("🔍 Langkah-Langkah Perhitungan")
+
+            if P == 0:
+                st.latex("PV = nRT")
+                st.markdown(f"""
+                Nilai yang diketahui:
+                - n = {n} mol  
+                - R = 0.0821 L·atm/mol·K  
+                - T = {T} K  
+                - V = {V} L  
+                """)
+                st.latex("P = \\frac{{nRT}}{{V}}")
+                P = (n * R * T) / V
+                st.latex(f"P = \\frac{{{n} × {R} × {T}}}{{{V}}} = {P:.3f} \\ atm")
+                st.success(f"✅ Tekanan (P) = {P:.3f} atm")
+
+            elif V == 0:
+                st.latex("PV = nRT")
+                st.markdown(f"""
+                Nilai yang diketahui:
+                - n = {n} mol  
+                - R = 0.0821 L·atm/mol·K  
+                - T = {T} K  
+                - P = {P} atm  
+                """)
+                st.latex("V = \\frac{{nRT}}{{P}}")
+                V = (n * R * T) / P
+                st.latex(f"V = \\frac{{{n} × {R} × {T}}}{{{P}}} = {V:.3f} \\ liter")
+                st.success(f"✅ Volume (V) = {V:.3f} liter")
+
+            elif n == 0:
+                st.latex("PV = nRT")
+                st.markdown(f"""
+                Nilai yang diketahui:
+                - P = {P} atm  
+                - V = {V} L  
+                - R = 0.0821 L·atm/mol·K  
+                - T = {T} K  
+                """)
+                st.latex("n = \\frac{{PV}}{{RT}}")
+                n = (P * V) / (R * T)
+                st.latex(f"n = \\frac{{{P} × {V}}}{{{R} × {T}}} = {n:.3f} \\ mol")
+                st.success(f"✅ Jumlah mol (n) = {n:.3f} mol")
+
+            elif T == 0:
+                st.latex("PV = nRT")
+                st.markdown(f"""
+                Nilai yang diketahui:
+                - P = {P} atm  
+                - V = {V} L  
+                - n = {n} mol  
+                - R = 0.0821 L·atm/mol·K  
+                """)
+                st.latex("T = \\frac{{PV}}{{nR}}")
+                T = (P * V) / (n * R)
+                st.latex(f"T = \\frac{{{P} × {V}}}{{{n} × {R}}} = {T:.2f} \\ K")
+                st.success(f"✅ Suhu (T) = {T:.2f} K")
+
+    st.caption("Breakdown ditampilkan berdasarkan persamaan PV = nRT dengan konstanta R = 0.0821 L·atm/mol·K")
+
 
 # ================================
 # 📊 DASHBOARD PAGE
@@ -89,7 +144,7 @@ elif menu == "📊 Dashboard":
 # ================================
 elif menu == "👥 Tentang Kami":
     st.title("👥 Tentang Kami")
-    st.markdown("""
+
     ### Tim Pengembang Aplikasi Kalkulator Gas Ideal
 
 
