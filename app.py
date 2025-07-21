@@ -191,7 +191,7 @@ elif menu == "🧾 Breakdown Perhitungan":
     # ================================
         elif menu == "👥 Tentang Kami":
             st.title("👥 Tentang Kami")
-            st.markdown(""")
+            st.markdown(""
             ### Tim Pengembang Aplikasi Kalkulator Gas Ideal
         
         
