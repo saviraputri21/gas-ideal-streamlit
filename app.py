@@ -3,7 +3,7 @@ import streamlit as st
 # ====================================
 # 🔧 CSS Custom untuk Background Menarik
 # ====================================
-st.markdown("""
+st.markdown(""")
 <style>
 /* Background gradient animation */
 body {
@@ -41,7 +41,7 @@ menu = st.sidebar.selectbox("📂 Pilih Halaman", ["🏠 Home", "📊 Dashboard"
 # ====================================
 if menu == "🏠 Home":
     st.title("🧪 Aplikasi Kalkulator Gas Ideal")
-    st.markdown(r"""
+    st.markdown(r""")
     ## Persamaan Gas Ideal
     \[
     PV = nRT
@@ -62,7 +62,7 @@ if menu == "🏠 Home":
 # ====================================
 elif menu == "📊 Dashboard":
     st.title("📚 Penjelasan Gas Ideal")
-    st.markdown("""
+    st.markdown(""")
     ## 🌬️ Apa itu Gas Ideal?
 
     Gas ideal adalah model teoretis dari gas yang mengikuti persamaan **PV = nRT**, di mana:
@@ -191,7 +191,7 @@ elif menu == "🧾 Breakdown Perhitungan":
     # ================================
         elif menu == "👥 Tentang Kami":
             st.title("👥 Tentang Kami")
-            st.markdown("""
+            st.markdown(""")
             ### Tim Pengembang Aplikasi Kalkulator Gas Ideal
         
         
