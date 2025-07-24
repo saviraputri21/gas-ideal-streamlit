@@ -1,5 +1,57 @@
 import streamlit as st
-import streamlit as st
+
+# Tambahkan CSS untuk tampilan biru muda + gambar tema kimia
+st.markdown(
+    """
+    <style>
+    /* Latar belakang halaman */
+    .stApp {
+        background-color: #e6f2ff; /* biru muda */
+        background-image: url('https://cdn.pixabay.com/photo/2017/03/19/03/13/chemistry-2156826_1280.jpg');
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: center;
+        color: #002b5c;
+    }
+
+    /* Kotak utama konten */
+    .block-container {
+        background-color: rgba(255, 255, 255, 0.88);
+        padding: 2rem;
+        border-radius: 20px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+
+    /* Judul dan teks */
+    h1, h2, h3, h4, h5, h6, p, label {
+        color: #002b5c; /* Biru teknik */
+    }
+
+    /* Input */
+    .stTextInput > div > div > input,
+    .stNumberInput input {
+        background-color: #ffffff;
+        color: #000000;
+        border: 1px solid #aaa;
+        border-radius: 6px;
+    }
+
+    /* Tombol */
+    button[kind="primary"] {
+        background-color: #0074D9;
+        color: white;
+        border-radius: 8px;
+    }
+
+    /* Alert box */
+    .stAlert {
+        background-color: rgba(240, 248, 255, 0.9);
+        border-left: 5px solid #0074D9;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 
 # ================================
 # 🌈 Background Biru Muda + gradasi merah muda 
