@@ -41,8 +41,6 @@ if menu == "🏠 Home":
     st.title("🧪 Aplikasi Kalkulator Gas Ideal")
     # Konten aplikasi
     st.markdown("<div class='main'>", unsafe_allow_html=True)
-    
-    st.markdown("## 🧪 Aplikasi Kalkulator Gas Ideal")
     st.markdown("### Persamaan Gas Ideal")
     st.markdown("**[ PV = nRT ]**")
     st.markdown("""
