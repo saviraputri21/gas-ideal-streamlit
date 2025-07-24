@@ -76,7 +76,7 @@ if menu == "🏠 Home":
     st.markdown("Aplikasi ini membantu menghitung salah satu variabel jika tiga lainnya diketahui.")
 
     st.markdown("</div>", unsafe_allow_html=True)
-        st.markdown(r"""
+    st.markdown(r"""
         ## Persamaan Gas Ideal
         \[
         **PV = nRT**
