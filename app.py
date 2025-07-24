@@ -1,27 +1,47 @@
 import streamlit as st
-# Tambahkan CSS untuk background
+
+# Tambahkan CSS untuk background biru dengan nuansa fisika/kimia
 st.markdown(
     """
     <style>
-    /* Ganti latar belakang halaman */
+    /* Latar belakang gradasi biru */
     .stApp {
-        background-image: url('https://images.unsplash.com/photo-1581093588401-4bb0b5a0b246?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80');
-        background-size: cover;
-        background-repeat: no-repeat;
+        background: linear-gradient(to bottom right, #001f3f, #0074D9, #7FDBFF);
         background-attachment: fixed;
-        background-position: center;
-        color: red;
+        color: white;
     }
 
-    /* Tambahkan latar belakang semi-transparan untuk konten utama */
+    /* Kontainer transparan untuk konten utama */
     .block-container {
-        background-color: rgba(0, 0, 0, 0.6);
+        background-color: rgba(0, 0, 50, 0.65);
         padding: 2rem;
         border-radius: 15px;
+        box-shadow: 0 0 15px rgba(0,0,0,0.3);
     }
 
-    /* Ubah warna teks untuk kontras */
-    h1, h2, h3, h4, h5, h6, p, label {
+    /* Judul dan teks */
+    h1, h2, h3, h4, h5, h6, p, label, .markdown-text-container {
+        color: #ffffff;
+    }
+
+    /* Gaya tombol */
+    button[kind="primary"] {
+        background-color: #0074D9;
+        color: white;
+    }
+
+    /* Input fields */
+    .stTextInput > div > div > input,
+    .stNumberInput input {
+        background-color: #ffffff11;
+        color: #fff;
+        border: 1px solid #7FDBFF;
+    }
+
+    /* Panel info, success, error */
+    .stAlert {
+        background-color: rgba(0,123,255,0.2);
+        border-left: 5px solid #7FDBFF;
         color: white;
     }
     </style>
