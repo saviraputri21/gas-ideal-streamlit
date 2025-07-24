@@ -46,7 +46,7 @@ elif menu == "📊 Dashboard":
     bg_color = "#fff0f5"  # pink muda
     bg_image = "url('https://cdn.pixabay.com/photo/2020/07/30/16/46/molecules-5450375_1280.jpg')"
 elif menu == "🧾 Breakdown Perhitungan":
-    bg_color = "#fffff0"  # krem
+    bg_color = "#fffff0"  # ccoklat tua
     bg_image = "url('https://cdn.pixabay.com/photo/2020/05/03/06/42/formula-5120370_1280.jpg')"
     st.markdown(f"""
     <style>
