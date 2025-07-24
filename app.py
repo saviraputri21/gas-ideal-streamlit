@@ -2,7 +2,7 @@ import streamlit as st
 import streamlit as st
 
 # ================================
-# 🌈 Background Biru Muda + Tema Teknik-Kimia 
+# 🌈 Background Biru Muda + gradasi merah muda 
 # ================================
 st.markdown(
     """
@@ -34,7 +34,7 @@ st.markdown(
 st.set_page_config(page_title="Kalkulator Gas Ideal", page_icon="🧪", layout="centered")
 
 # Sidebar Navigasi
-menu = st.sidebar.selectbox("📂 Pilih Halaman", ["🏠 Home", "📊 Dashboard", "🧮 Kalkulator", "🧾 Breakdown Perhitungan ","👥 Tentang Kami"])
+menu = st.sidebar.selectbox("📂 Pilih Halaman", ["🏠 Home", "📊 Dashboard", "🧮 Kalkulator", "🧾 Breakdown Perhitungan","👥 Tentang Kami"])
 
 # ================================
 # 🏠 HOME PAGE
