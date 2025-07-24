@@ -283,7 +283,6 @@ elif menu == "🧾 Breakdown Perhitungan":
                 st.success(f"✅ Suhu (T) = {T:.2f} K")
 
     st.caption("Breakdown ditampilkan berdasarkan persamaan PV = nRT dengan konstanta R = 0.0821 L·atm/mol·K")
-   **
     if st.button("Tampilkan Breakdown"):
         zero_count = sum([P == 0, V == 0, n == 0, T == 0])
         if zero_count != 1:
