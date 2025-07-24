@@ -51,9 +51,6 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-# Konten aplikasi
-st.title("🧬 Struktur Molekul 3D")
-st.write("Aplikasi ini menggunakan latar belakang molekul 3D untuk nuansa kimia dan fisika modern.")
 # Konfigurasi halaman
 st.set_page_config(page_title="Kalkulator Gas Ideal", page_icon="🧪", layout="centered")
 
