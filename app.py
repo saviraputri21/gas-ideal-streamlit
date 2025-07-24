@@ -19,7 +19,16 @@ elif menu == "👥 Tentang Kami":
 st.markdown(
     f"""
     <style>
-    .stApp {{
+    import streamlit as st
+
+st.markdown("""
+    <style>
+    /* Ubah warna latar belakang keseluruhan */
+    .stApp {
+        background-color: #E0F2F1; /* Hijau pastel lembut */
+    }
+    </style>
+""", unsafe_allow_html=True)
         background-color: {bg_color};
         background-size: contain;
         background-repeat: repeat;
