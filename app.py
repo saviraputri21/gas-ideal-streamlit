@@ -1,5 +1,35 @@
 import streamlit as st
+import streamlit as st
 
+# ================================
+# 🌈 Background Biru Muda + Tema Teknik-Kimia
+# ================================
+st.markdown(
+    """
+    <style>
+    .stApp {
+        background-color: #e0f7fa;
+        background-image: url('https://cdn.pixabay.com/photo/2017/08/30/07/52/chemistry-2696850_1280.png'); /* Struktur atom/kimia */
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed;
+    }
+
+    .block-container {
+        background-color: rgba(255, 255, 255, 0.88);
+        padding: 2rem;
+        border-radius: 15px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+
+    h1, h2, h3, h4, h5, h6, p, label, .markdown-text-container {
+        color: #004d40; /* biru kehijauan */
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 # Konfigurasi halaman
 st.set_page_config(page_title="Kalkulator Gas Ideal", page_icon="🧪", layout="centered")
 
@@ -198,7 +228,6 @@ def gas_ideal_calculator():
 # ================================
 # 🧾 Breakdown Perhitungan 
 # ================================
-menu = st.sidebar.selectbox(...)
 if menu == "🏠 Home":
     ...
 elif menu == "📊 Dashboard":
@@ -214,8 +243,8 @@ elif menu == "🧾 Breakdown Perhitungan":
     R = 0.0821
     
     if st.button("🔍 Tampilkan Proses Perhitungan"):
-        kosong = sum([P == 0, V == 0, n == 0, T == 0])
-        
+    kosong = sum([P == 0, V == 0, n == 0, T == 0])
+
     if kosong != 1:
         st.error("Isi **3 variabel**, kosongkan **1** saja dengan 0!")
     else:
