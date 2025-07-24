@@ -1,7 +1,7 @@
 import streamlit as st
 
 # ================================
-# 🌈 Background Biru Muda + gradasi merah muda 
+# 🌈 Background hijau 
 # ================================
 st.markdown(
     """
@@ -23,7 +23,7 @@ st.markdown(
     }
 
     h1, h2, h3, h4, h5, h6, p, label, .markdown-text-container {
-        color: #004d40; /* biru kehijauan */
+        color: #000000; /* black */
     }
     </style>
     """,
