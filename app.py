@@ -5,53 +5,7 @@ st.markdown(
     """
     <style>
     .stApp {
-        background-image: url('import streamlit as st
-
-# Tambahkan CSS untuk latar belakang cerah bertema kimia
-st.markdown(
-    """
-    <style>
-    .stApp {
-        background-image: url('https://images.app.goo.gl/GPJqBsfiVTrMtF3K7');
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-position: center;
-        color: black;
-    }
-
-    .block-container {
-        background-color: rgba(255, 255, 255, 0.85);
-        padding: 2rem;
-        border-radius: 15px;
-        box-shadow: 0 0 10px rgba(0,0,0,0.15);
-    }
-
-    h1, h2, h3, h4, h5, h6, p, label, .markdown-text-container {
-        color: #002b5c; /* biru gelap agar kontras di latar terang */
-    }
-
-    .stTextInput > div > div > input,
-    .stNumberInput input {
-        background-color: #ffffff;
-        color: #000;
-        border: 1px solid #aaa;
-    }
-
-    .stAlert {
-        background-color: rgba(240, 248, 255, 0.8);
-        border-left: 5px solid #0074D9;
-        color: #000;
-    }
-
-    button[kind="primary"] {
-        background-color: #0074D9;
-        color: white;
-    }
-    </style>
-    """,
-    unsafe_allow_html=True
-)');
+        background-image: url('https://images.unsplash.com/photo-1581090700227-1e8a6a9b01ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80');
         background-size: cover;
         background-repeat: no-repeat;
         background-attachment: fixed;
@@ -91,6 +45,7 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
+
 # Konfigurasi halaman
 st.set_page_config(page_title="Kalkulator Gas Ideal", page_icon="🧪", layout="centered")
 
