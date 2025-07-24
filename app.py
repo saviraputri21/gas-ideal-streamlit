@@ -204,7 +204,10 @@ def gas_ideal_calculator():
 
 # Jalankan kalkulator
 gas_ideal_calculator()
-
+if menu == "🏠 Home":
+    ...
+elif menu == "📊 Dashboard":
+    ...
 elif menu == "🧾 Breakdown Perhitungan":
     st.title("🧾 Breakdown Perhitungan Gas Ideal PV = nRT")
     st.markdown("Masukkan **3 variabel** dan kosongkan **1 variabel** dengan mengisi angka 0 (nol). Sistem akan menampilkan langkah perhitungannya.")
