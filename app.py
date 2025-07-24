@@ -1,56 +1,65 @@
 import streamlit as st
 
-# Tambahkan CSS untuk latar belakang cerah bertema kimia
+# Konfigurasi halaman
+# CSS dengan background gambar molekul + warna biru muda
 st.markdown(
     """
     <style>
     .stApp {
-        background-image: url('https://images.unsplash.com/photo-1581090700227-1e8a6a9b01ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80');
+        background-color: #B3D9FF;
+        background-image: url('https://media.istockphoto.com/id/1157552078/photo/molecule-3d-render.jpg');
         background-size: cover;
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-position: center;
-        color: black;
+        color: #002244;
     }
 
     .block-container {
-        background-color: rgba(255, 255, 255, 0.85);
+        background-color: rgba(255, 255, 255, 0.9);
         padding: 2rem;
         border-radius: 15px;
-        box-shadow: 0 0 10px rgba(0,0,0,0.15);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
 
     h1, h2, h3, h4, h5, h6, p, label, .markdown-text-container {
-        color: #002b5c; /* biru gelap agar kontras di latar terang */
+        color: #002244; /* biru gelap untuk kontras */
     }
 
     .stTextInput > div > div > input,
     .stNumberInput input {
         background-color: #ffffff;
-        color: #000;
-        border: 1px solid #aaa;
+        color: #000000;
+        border: 1px solid #666;
     }
 
     .stAlert {
-        background-color: rgba(240, 248, 255, 0.8);
+        background-color: rgba(220, 240, 255, 0.9);
         border-left: 5px solid #0074D9;
         color: #000;
     }
 
     button[kind="primary"] {
         background-color: #0074D9;
-        color: blue;
+        color: white;
+    }
+
+    button[kind="primary"]:hover {
+        background-color: #005fa3;
+        color: white;
     }
     </style>
     """,
     unsafe_allow_html=True
 )
 
+# Konten aplikasi
+st.title("🧬 Struktur Molekul 3D")
+st.write("Aplikasi ini menggunakan latar belakang molekul 3D untuk nuansa kimia dan fisika modern.")
 # Konfigurasi halaman
 st.set_page_config(page_title="Kalkulator Gas Ideal", page_icon="🧪", layout="centered")
 
-# Sidebar Navigasi
-menu = st.sidebar.selectbox("📂 Pilih Halaman", ["🏠 Home", "📊 Dashboard", "🧮 Kalkulator","🧾 BREAKDOWN PERHITUNGAN PAGE","👥 Tentang Kami"])
+# Sidebar Navigasi mmenu = st.sidebar.selectbox("📂 Pilih Halaman", ["🏠 Home", "📊 Dashboard", "🧮 Kalkulator","🧾 BREAKDOWN PERHITUNGAN","👥 Tentang Kami"])
 
 # ================================
 # 🏠 HOME PAGE
