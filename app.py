@@ -1,53 +1,51 @@
 import streamlit as st
+# Tambahkan CSS untuk background
+st.markdown(
+    """
+    <style>
+    /* Ganti latar belakang halaman */
+    .stApp {
+        background-image: url('https://images.unsplash.com/photo-1581093588401-4bb0b5a0b246?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+        color: red;
+    }
 
-# ====================================
-# 🔧 CSS Custom untuk Background Menarik
-# ====================================
-st.markdown(""")
-<style>
-/* Background gradient animation */
-body {
-    background: linear-gradient(-45deg, #89f7fe, #66a6ff, #7EE8FA, #EEC0C6);
-    background-size: 400% 400%;
-    animation: gradientBG 15s ease infinite;
-}
+    /* Tambahkan latar belakang semi-transparan untuk konten utama */
+    .block-container {
+        background-color: rgba(0, 0, 0, 0.6);
+        padding: 2rem;
+        border-radius: 15px;
+    }
 
-@keyframes gradientBG {
-    0% {background-position: 0% 50%;}
-    50% {background-position: 100% 50%;}
-    100% {background-position: 0% 50%;}
-}
-
-/* Blur transparan di konten */
-.css-18e3th9 {
-    backdrop-filter: blur(6px);
-    background-color: rgba(255, 255, 255, 0.75);
-    border-radius: 10px;
-    padding: 1.5em;
-}
-</style>
-""", unsafe_allow_html=True)
-
-# ====================================
-# 🧪 Konfigurasi Halaman
-# ====================================
+    /* Ubah warna teks untuk kontras */
+    h1, h2, h3, h4, h5, h6, p, label {
+        color: white;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+# Konfigurasi halaman
 st.set_page_config(page_title="Kalkulator Gas Ideal", page_icon="🧪", layout="centered")
 
 # Sidebar Navigasi
-menu = st.sidebar.selectbox("📂 Pilih Halaman", ["🏠 Home", "📊 Dashboard", "🧮 Kalkulator", "🧾 Breakdown Perhitungan", "👥 Tentang Kami"])
+menu = st.sidebar.selectbox("📂 Pilih Halaman", ["🏠 Home", "📊 Dashboard", "🧮 Kalkulator","🧾 BREAKDOWN PERHITUNGAN PAGE","👥 Tentang Kami"])
 
-# ====================================
-# 🏠 HOME
-# ====================================
+# ================================
+# 🏠 HOME PAGE
+# ================================
 if menu == "🏠 Home":
     st.title("🧪 Aplikasi Kalkulator Gas Ideal")
-    st.markdown(r""")
+    st.markdown(r"""
     ## Persamaan Gas Ideal
     \[
-    PV = nRT
+    **PV = nRT**
     \]
-
-    Keterangan:
+    
+    Keterangan
     - P : Tekanan (atm)  
     - V : Volume (L)  
     - n : Jumlah mol  
@@ -56,13 +54,15 @@ if menu == "🏠 Home":
 
     Aplikasi ini membantu menghitung salah satu variabel jika tiga lainnya diketahui.
     """)
+    st.info("Pilih halaman di sidebar untuk menggunakan kalkulator atau melihat grafik hubungan volume & tekanan.")
 
-# ====================================
-# 📊 DASHBOARD
-# ====================================
+# ================================
+# 📊 DASHBOARD PAGE
+# ================================
 elif menu == "📊 Dashboard":
     st.title("📚 Penjelasan Gas Ideal")
-    st.markdown(""")
+
+    st.markdown("""
     ## 🌬️ Apa itu Gas Ideal?
 
     Gas ideal adalah model teoretis dari gas yang mengikuti persamaan **PV = nRT**, di mana:
@@ -77,36 +77,86 @@ elif menu == "📊 Dashboard":
     ## 📏 Hukum-Hukum dalam Gas Ideal
 
     **1. Hukum Boyle**  
-    Volume ∝ 1/Tekanan (pada suhu tetap)  
-    \[ P_1 V_1 = P_2 V_2 \]
-
+    Pada suhu tetap, volume berbanding terbalik dengan tekanan.  
+    PV = Konstan
+    
+    P1.V1 = P2.V2
+    
     **2. Hukum Charles**  
-    Volume ∝ Suhu (pada tekanan tetap)  
-    \[ \frac{V_1}{T_1} = \frac{V_2}{T_2} \]
+    Pada tekanan tetap, volume berbanding lurus dengan suhu.  
+      VT = Konstan
+      
+      V1/T1 = V2/T2
 
     **3. Hukum Gay-Lussac**  
-    Tekanan ∝ Suhu (pada volume tetap)  
-    \[ \frac{P_1}{T_1} = \frac{P_2}{T_2} \]
-
+    Pada volume tetap, tekanan berbanding lurus dengan suhu.  
+      P/T = Konstan
+      
+      (P1/T1 = P2/T2)
+     
     ---
 
     ## ⚛️ Sifat-Sifat Gas Ideal
 
-    1. Partikel bergerak secara acak
-    2. Tidak ada gaya tarik menarik antar molekul
-    3. Ukuran partikel sangat kecil
-    4. Partikel terdistribusi merata dalam ruang
-    5. Tumbukan antar partikel adalah lenting sempurna
+    1. Partikel bergerak secara acak dalam semua arah  
+    2. Tidak ada gaya tarik menarik antar molekul  
+    3. Ukuran partikel sangat kecil 
+    4. Partikel terdistribusi merata dalam ruang  
+    5. Tumbukan antar partikel adalah lenting sempurna  
     6. Energi kinetik rata-rata sebanding dengan suhu
+
+    ---
+
+    🔍 Catatan: Tidak ada gas yang 100% ideal di dunia nyata, namun model ini sangat berguna dalam ilmu kimia dan fisika!
+    """)
+    
+# ================================
+# 👥 Tentang Kami
+# ================================
+elif menu == "👥 Tentang Kami":
+    st.title("👥 Tentang Kami")
+    st.markdown("""
+    ### Tim Pengembang Aplikasi Kalkulator Gas Ideal
+
+
+    Selamat datang di PV-nRTin Aja! 🧪
+    
+    Sebuah platform kalkulator gas ideal yang dibuat untuk mahasiswa, pelajar, atau pejuang tugas akhir—yang sering berkutat dengan rumus legendaris PV = nRT 😵‍💫
+    Di dunia teknik dan sains, perhitungan gas ideal itu penting banget, tapi jujur aja... kadang ribet 😅. 
+    
+    Nah, di sinilah kami hadir: biar kamu bisa fokus ke konsepnya, dan biarkan sistem kami yang ngurusin hitung-hitungan nya ✨📊
+    Nama PV-nRTin Aja kami pilih bukan cuma biar catchy, tapi juga sebagai ajakan:
+    💬 nggak usah ribet, tinggal masukin data... terus “PV-nRTin Aja”! 🚀
+    
+    Dengan tampilan simpel dan nuansa khas anak sains dan teknik, kami ingin bantu kamu belajar dengan cara yang praktis🎯
+    
+    Karena hidup udah cukup berat...
+    
+    📌 Jangan biarkan tekanan gas ikut bikin tekanan batin 🤖💨
+
+   Terima kasih atas kunjungan dan kepercayaan Anda menggunakan aplikasi ini.
+   Kami berharap aplikasi yang kami kembangkan dapat memberikan kemudahan dalam memahami konsep Hukum Gas Ideal
+   serta membantu menghitung gas ideal.
+   
+   📘**Disusun oleh Kelompok 2**
+   
+   **Anggota Kelompok:** 
+   - Azka Afriyuni Suwito (2360084)
+   - Dhelys Kusuma Wardani (2460356)
+   - Ismi Aziz(2460393)
+   - Mutia Ningrum (2460444)
+   - Savira Putri Pramudita (2460514)
+   
     """)
 
-# ====================================
-# 🧮 KALKULATOR
-# ====================================
+# ================================
+# 🧮 KALKULATOR PAGE
+# ================================
 elif menu == "🧮 Kalkulator":
     st.title("🧮 Kalkulator Gas Ideal (PV = nRT)")
     st.markdown("Masukkan **3 variabel** dan kosongkan **1 variabel** dengan mengisi angka 0 (nol).")
 
+    # Input user
     P = st.number_input("Tekanan (P) dalam atm", value=0.0)
     V = st.number_input("Volume (V) dalam liter", value=0.0)
     n = st.number_input("Jumlah mol (n)", value=0.0)
@@ -131,13 +181,61 @@ elif menu == "🧮 Kalkulator":
 
     st.caption("Menggunakan konstanta gas R = 0.0821 L·atm/mol·K")
 
-# ====================================
-# 🧾 BREAKDOWN PERHITUNGAN
-# ====================================
+def gas_ideal_calculator():
+    R = 0.0821  # atm·L/mol·K (bisa ditambah opsi satuan lain)
+    print("=== KALKULATOR GAS IDEAL (PV = nRT) ===")
+    print("Masukkan nilai, ketik 'x' untuk variabel yang ingin dicari.")
+
+    # Input dari user
+    P = input("Tekanan (P) dalam atm: ")
+    V = input("Volume (V) dalam liter: ")
+    n = input("Mol (n): ")
+    T = input("Suhu (T) dalam Celsius: ")
+
+    # Ubah suhu ke Kelvin
+    if T != 'x':
+        T = float(T) + 273.15
+
+    # Hitung berdasarkan variabel yang hilang
+    if P == 'x':
+        V = float(V)
+        n = float(n)
+        P = (n * R * T) / V
+        print(f"Tekanan (P) = {P:.3f} atm")
+
+    elif V == 'x':
+        P = float(P)
+        n = float(n)
+        V = (n * R * T) / P
+        print(f"Volume (V) = {V:.3f} liter")
+
+    elif n == 'x':
+        P = float(P)
+        V = float(V)
+        n = (P * V) / (R * T)
+        print(f"Mol (n) = {n:.3f} mol")
+
+    elif T == 'x':
+        P = float(P)
+        V = float(V)
+        n = float(n)
+        T = (P * V) / (n * R)
+        print(f"Suhu (T) = {T - 273.15:.2f} °C (atau {T:.2f} K)")
+
+    else:
+        print("Semua variabel terisi. Tidak ada yang perlu dihitung.")
+
+# Jalankan kalkulator
+gas_ideal_calculator()
+
+# ================================
+# 🧾 BREAKDOWN PERHITUNGAN PAGE
+# ================================
 elif menu == "🧾 Breakdown Perhitungan":
     st.title("🧾 Breakdown Perhitungan Gas Ideal (PV = nRT)")
-    st.markdown("Masukkan **3 variabel**, kosongkan **1 variabel** dengan mengisi angka 0. Hasil disertai langkah-langkah perhitungan.")
+    st.markdown("Masukkan **3 variabel** dan kosongkan **1 variabel** dengan mengisi angka 0 (nol). Sistem akan menampilkan langkah perhitungannya.")
 
+    # Input user
     P = st.number_input("Tekanan (P) dalam atm", value=0.0, key="bp_P")
     V = st.number_input("Volume (V) dalam liter", value=0.0, key="bp_V")
     n = st.number_input("Jumlah mol (n)", value=0.0, key="bp_n")
@@ -147,32 +245,52 @@ elif menu == "🧾 Breakdown Perhitungan":
     if st.button("Tampilkan Breakdown"):
         zero_count = sum([P == 0, V == 0, n == 0, T == 0])
         if zero_count != 1:
-            st.error("Kosongkan *tepat satu* variabel (isi dengan 0), dan tiga lainnya harus > 0.")
+            st.error("Tolong kosongkan tepat satu variabel (isi dengan 0), dan isi 3 variabel lainnya dengan nilai > 0.")
         else:
             st.subheader("🔍 Langkah-Langkah Perhitungan")
 
             if P == 0:
                 st.latex("PV = nRT")
-                st.markdown(f"n = {n}, R = 0.0821, T = {T}, V = {V}")
-                st.latex("P = \\frac{nRT}{V}")
-                result = (n * R * T) / V
-                st.latex(f"P = \\frac{{{n} × {R} × {T}}}{{{V}}} = {result:.3f} \\ atm")
-                st.success(f"✅ Tekanan (P) = {result:.3f} atm")
+                st.markdown(f"""
+                Nilai yang diketahui:
+                - n = {n} mol  
+                - R = 0.0821 L·atm/mol·K  
+                - T = {T} K  
+                - V = {V} L  
+                """)
+                st.latex("P = \\frac{{nRT}}{{V}}")
+                P = (n * R * T) / V
+                st.latex(f"P = \\frac{{{n} × {R} × {T}}}{{{V}}} = {P:.3f} \\ atm")
+                st.success(f"✅ Tekanan (P) = {P:.3f} atm")
 
             elif V == 0:
                 st.latex("PV = nRT")
-                st.markdown(f"n = {n}, R = 0.0821, T = {T}, P = {P}")
-                st.latex("V = \\frac{nRT}{P}")
-                result = (n * R * T) / P
-                st.latex(f"V = \\frac{{{n} × {R} × {T}}}{{{P}}} = {result:.3f} \\ liter")
-                st.success(f"✅ Volume (V) = {result:.3f} liter")
+                st.markdown(f"""
+                Nilai yang diketahui:
+                - n = {n} mol  
+                - R = 0.0821 L·atm/mol·K  
+                - T = {T} K  
+                - P = {P} atm  
+                """)
+                st.latex("V = \\frac{{nRT}}{{P}}")
+                V = (n * R * T) / P
+                st.latex(f"V = \\frac{{{n} × {R} × {T}}}{{{P}}} = {V:.3f} \\ liter")
+                st.success(f"✅ Volume (V) = {V:.3f} liter")
+
             elif n == 0:
                 st.latex("PV = nRT")
-                st.markdown(f"P = {P}, V = {V}, R = 0.0821, T = {T}")
-                st.latex("n = \\frac{PV}{RT}")
-                result = (P * V) / (R * T)
-                st.latex(f"n = \\frac{{{{{P} × {V}}}}}{{{{{R} × {T}}}}} = {result:.3f} \\ mol")
-                st.success(f"✅ Jumlah mol (n) = {result:.3f} mol")
+                st.markdown(f"""
+                Nilai yang diketahui:
+                - P = {P} atm  
+                - V = {V} L  
+                - R = 0.0821 L·atm/mol·K  
+                - T = {T} K  
+                """)
+                st.latex("n = \\frac{{PV}}{{RT}}")
+                n = (P * V) / (R * T)
+                st.latex(f"n = \\frac{{{P} × {V}}}{{{R} × {T}}} = {n:.3f} \\ mol")
+                st.success(f"✅ Jumlah mol (n) = {n:.3f} mol")
+
             elif T == 0:
                 st.latex("PV = nRT")
                 st.markdown(f"""
@@ -186,39 +304,5 @@ elif menu == "🧾 Breakdown Perhitungan":
                 T = (P * V) / (n * R)
                 st.latex(f"T = \\frac{{{P} × {V}}}{{{n} × {R}}} = {T:.2f} \\ K")
                 st.success(f"✅ Suhu (T) = {T:.2f} K")
-    # ================================
-    # 👥 Tentang Kami
-    # ================================
-        elif menu == "👥 Tentang Kami":
-            st.title("👥 Tentang Kami")
-            st.markdown(""
-            ### Tim Pengembang Aplikasi Kalkulator Gas Ideal
-        
-        
-            Selamat datang di PV-nRTin Aja! 
-            
-            Sebuah platform kalkulator gas ideal yang dibuat untuk mahasiswa, pelajar, atau pejuang tugas akhir—yang sering berkutat dengan rumus legendaris PV = nRT 😵‍💫
-            Di dunia teknik dan sains, perhitungan gas ideal itu penting banget, tapi jujur aja... kadang ribet 😅.
-            
-            Nah, di sinilah kami hadir: biar kamu bisa fokus ke konsepnya, dan biarkan sistem kami yang ngurusin hitung-hitungan nya ✨📊
-            Nama PV-nRTin Aja kami pilih bukan cuma biar catchy, tapi juga sebagai ajakan:
-            💬 nggak usah ribet, tinggal masukin data... terus “PV-nRTin Aja”! 🚀
-            
-            "Dengan tampilan simpel dan nuansa khas anak sains dan teknik, kami ingin bantu kamu belajar dengan cara yang praktis🎯
-            
-            Karena hidup udah cukup berat...
-            
-            📌 Jangan biarkan tekanan gas ikut bikin tekanan batin 🤖💨"
-        
-           Terima kasih atas kunjungan dan kepercayaan Anda menggunakan aplikasi ini.
-           Kami berharap aplikasi yang kami kembangkan dapat memberikan kemudahan dalam memahami konsep Hukum Gas Ideal
-           serta membantu menghitung gas ideal.
-           
-           📘*Disusun oleh Kelompok 2*
-   
-           *Anggota Kelompok:* 
-           - Azka Afriyuni Suwito (2360084)
-           - Dhelys Kusuma Wardani (2460356)
-           - Ismi Aziz(2460393)
-           - Mutia Ningrum (2460444)
-           - Savira Putri Pramudita (2460514)
+
+    st.caption("Breakdown ditampilkan berdasarkan persamaan PV = nRT dengan konstanta R = 0.0821 L·atm/mol·K")
