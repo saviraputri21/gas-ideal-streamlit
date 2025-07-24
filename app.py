@@ -39,6 +39,7 @@ menu = st.sidebar.selectbox("📂 Pilih Halaman", ["🏠 Home", "📊 Dashboard"
 # ================================
 if menu == "🏠 Home":
     st.title("🧪 Aplikasi Kalkulator Gas Ideal")
+    st.markdown(r"""
         <!DOCTYPE html>
     <html>
     <head>
