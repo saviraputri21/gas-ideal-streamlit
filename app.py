@@ -7,7 +7,7 @@ st.markdown(
     """
     <style>
     .stApp {
-        background-color: #4682B4;
+        background-color: #A8E6CF;
         background-image: url('https://cdn.pixabay.com/photo/2017/08/30/07/52/chemistry-2696850_1280.png'); /* Struktur atom/kimia */
         background-size: contain;
         background-repeat: no-repeat;
