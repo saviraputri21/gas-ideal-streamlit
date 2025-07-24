@@ -39,49 +39,48 @@ menu = st.sidebar.selectbox("📂 Pilih Halaman", ["🏠 Home", "📊 Dashboard"
 # ================================
 if menu == "🏠 Home":
     st.title("🧪 Aplikasi Kalkulator Gas Ideal")
-    st.markdown(r"""
-        <!DOCTYPE html>
-    <html>
-    <head>
-      <title>Kalkulator Gas Ideal</title>
-      <style>
-        .app-container {
-          background-color: #E0F2F1; /* Hijau pastel lembut */
-          padding: 30px;
-          border-radius: 12px;
-          max-width: 700px;
-          margin: auto;
-          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    import streamlit as st
+       # Atur warna latar belakang halaman dengan CSS
+    st.markdown(
+        """
+        <style>
+        .main {
+            background-color: #E0F2F1;  /* Hijau pastel lembut */
+            padding: 20px;
+            border-radius: 10px;
         }
-
-        body {
-          background-color: #B2DFDB; /* Warna latar belakang umum (lebih gelap) */
-          font-family: sans-serif;
+    
+        h1 {
+            color: #004D40;
         }
-      </style>
-    </head>
-    <body>
-      <div class="app-container">
-        <h1>🧪 Aplikasi Kalkulator Gas Ideal</h1>
-        <h2>Persamaan Gas Ideal</h2>
-        <p>[ PV = nRT ]</p>
-        <ul>
-          <li><strong>P</strong> : Tekanan (atm)</li>
-          <li><strong>V</strong> : Volume (L)</li>
-          <li><strong>n</strong> : Jumlah mol</li>
-          <li><strong>R</strong> : 0.0821 L·atm/mol·K</li>
-          <li><strong>T</strong> : Suhu (K)</li>
-        </ul>
-        <p>Aplikasi ini membantu menghitung salah satu variabel jika tiga lainnya diketahui.</p>
-      </div>
-    </body>
-    </html>
+    
+        </style>
+        """,
+        unsafe_allow_html=True
+    )
 
-    st.markdown(r"""
-    ## Persamaan Gas Ideal
-    \[
-    **PV = nRT**
-    \]
+    # Konten aplikasi
+    st.markdown("<div class='main'>", unsafe_allow_html=True)
+    
+    st.markdown("## 🧪 Aplikasi Kalkulator Gas Ideal")
+    st.markdown("### Persamaan Gas Ideal")
+    st.markdown("**[ PV = nRT ]**")
+    st.markdown("""
+    **Keterangan:**
+    - **P** : Tekanan (atm)  
+    - **V** : Volume (L)  
+    - **n** : Jumlah mol  
+    - **R** : 0.0821 L·atm/mol·K  
+    - **T** : Suhu (K)  
+    """)
+    st.markdown("Aplikasi ini membantu menghitung salah satu variabel jika tiga lainnya diketahui.")
+
+    st.markdown("</div>", unsafe_allow_html=True)
+        st.markdown(r"""
+        ## Persamaan Gas Ideal
+        \[
+        **PV = nRT**
+        \]
     
     Keterangan
     - P : Tekanan (atm)  
