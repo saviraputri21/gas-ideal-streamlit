@@ -1,7 +1,5 @@
 import streamlit as st
-
-# Konfigurasi halaman
-# CSS dengan background gambar molekul + warna biru muda
+#CSS dengan background warna biru muda
 st.markdown(
     """
     <style>
