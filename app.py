@@ -9,7 +9,7 @@ st.markdown(
     .stApp {
         background-color: #A8E6CF;
         background-size: contain;
-        background-repeat: no-repeat;
+        background-repeat: repeat;
         background-position: center;
         background-attachment: fixed;
     }
@@ -33,40 +33,6 @@ st.set_page_config(page_title="Kalkulator Gas Ideal", page_icon="🧪", layout="
 
 # Sidebar Navigasi
 menu = st.sidebar.selectbox("📂 Pilih Halaman", ["🏠 Home", "📊 Dashboard", "🧮 Kalkulator", "🧾 Breakdown Perhitungan","👥 Tentang Kami"])
-
-# Warna background per halaman
-if menu == "🏠 Home":
-    bg_color = "#FFFDD0"  # krem
-    bg_image = "url('https://cdn.pixabay.com/photo/2017/03/19/03/13/chemistry-2156826_1280.jpg')"
-elif menu == "🧮 Kalkulator":
-    bg_color = "#FFFDD0"  # krem
-    bg_image = "url('https://cdn.pixabay.com/photo/2017/04/04/17/03/lab-2200497_1280.jpg')"
-elif menu == "📊 Dashboard":
-    bg_color = "#FFFDD0"  # krem
-    bg_image = "url('https://cdn.pixabay.com/photo/2020/07/30/16/46/molecules-5450375_1280.jpg')"
-elif menu == "🧾 Breakdown Perhitungan":
-    bg_color = "#FFFDD0"  # krem
-    bg_image = "url('https://cdn.pixabay.com/photo/2020/05/03/06/42/formula-5120370_1280.jpg')"
-    st.markdown(f"""
-    <style>
-    .stApp {{
-        background-color: {bg_color};
-        background-image: {bg_image};
-        background-size: cover;
-        background-attachment: fixed;
-        background-position: center;
-        }}
-        .block-container {{
-            background-color: rgba(255,255,255,0.88);
-            padding: 2rem;
-            border-radius: 15px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.2);
-        }}
-        h1, h2, h3, h4, h5, h6, p, label {{
-            color: #002b5c;
-        }}
-        </style>
-    """, unsafe_allow_html=True)
     
 # ================================
 # 🏠 HOME PAGE
