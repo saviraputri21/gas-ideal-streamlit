@@ -4,7 +4,7 @@ import streamlit as st
 st.set_page_config(page_title="Kalkulator Gas Ideal", page_icon="🧪", layout="centered")
 
 # Sidebar Navigasi
-menu = st.sidebar.selectbox("📂 Pilih Halaman", ["🏠 Home", "📊 Dashboard", "🧮 Kalkulator","🧾 Breakdown Perhitungan ","👥 Tentang Kami"])
+menu = st.sidebar.selectbox("📂 Pilih Halaman", ["🏠 Home", "📊 Dashboard", "🧮 Kalkulator", "🧾 Breakdown Perhitungan ","👥 Tentang Kami"])
 
 # ================================
 # 🏠 HOME PAGE
@@ -195,14 +195,11 @@ def gas_ideal_calculator():
     else:
         print("Semua variabel terisi. Tidak ada yang perlu dihitung.")
 
-# Jalankan kalkulator
-gas_ideal_calculator()
-
 # ================================
 # 🧾 Breakdown Perhitungan 
 # ================================
-if menu == "🧾 Breakdown Perhitungan":
-    st.title("🧾 Breakdown Perhitungan Gas Ideal")
+elif menu == "🧾 Breakdown Perhitungan":
+    st.title ("🧾 Breakdown Perhitungan Gas Ideal")
     st.markdown("Masukkan **3 variabel** dan kosongkan **1 variabel** dengan mengisi angka 0 (nol). Sistem akan menampilkan langkah perhitungannya.")
 
     # Input user
