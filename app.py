@@ -201,12 +201,7 @@ gas_ideal_calculator()
 # ================================
 # 🧾 Breakdown Perhitungan 
 # ================================
-menu = st.sidebar.selectbox(...)
-if menu == "🏠 Home":
-    ...
-elif menu == "📊 Dashboard":
-    ...
-elif menu == "🧾 Breakdown Perhitungan":
+if menu == "🧾 Breakdown Perhitungan":
     st.title("🧾 Breakdown Perhitungan Gas Ideal")
     st.markdown("Masukkan **3 variabel** dan kosongkan **1 variabel** dengan mengisi angka 0 (nol). Sistem akan menampilkan langkah perhitungannya.")
 
