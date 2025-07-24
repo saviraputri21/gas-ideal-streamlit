@@ -29,41 +29,48 @@ st.markdown(
 
     .block-container {{
         background-color: rgba(255, 255, 255, 0.88);
-        padding: 2rem;
-        border-radius: 15px;
-        box-shadow: 0 0 10px rgba(0,0,0,0.2);
-    }}
+st.markdown("""
+        <style>
+        .main {
+            padding: 2rem;
+            background-color: #E0F2F1;
+            border-radius: 10px;
+        }
+        </style>
+    """, unsafe_allow_html=True)
+    
+        }}
+    
+        h1, h2, h3, h4, h5, h6, p, label, .markdown-text-container {{
+            color: #000000;
+        }}
+        </style>
+        """,
+        unsafe_allow_html=True
+    )
+        <style>
+        .stApp {
+            background-color: #A8E6CF;
+            background-size: contain;
+            background-repeat: repeat;
+            background-position: center;
+            background-attachment: fixed;
+        }
+    
+        .block-container {
+            background-color: rgba(255, 255, 255, 0.88);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        }
 
-    h1, h2, h3, h4, h5, h6, p, label, .markdown-text-container {{
-        color: #000000;
-    }}
-    </style>
-    """,
-    unsafe_allow_html=True
-)
-    <style>
-    .stApp {
-        background-color: #A8E6CF;
-        background-size: contain;
-        background-repeat: repeat;
-        background-position: center;
-        background-attachment: fixed;
-    }
-
-    .block-container {
-        background-color: rgba(255, 255, 255, 0.88);
-        padding: 2rem;
-        border-radius: 15px;
-        box-shadow: 0 0 10px rgba(0,0,0,0.2);
-    }
-
-    h1, h2, h3, h4, h5, h6, p, label, .markdown-text-container {
-        color: #000000; /* black */
-    }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
+        h1, h2, h3, h4, h5, h6, p, label, .markdown-text-container {
+            color: #000000; /* black */
+        }
+        </style>
+        """,
+        unsafe_allow_html=True
+    )
 # Konfigurasi halaman
 st.set_page_config(page_title="Kalkulator Gas Ideal", page_icon="🧪", layout="centered")
 
