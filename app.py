@@ -34,8 +34,7 @@ st.markdown("""
         background-repeat: repeat;
         background-position: center;
         background-attachment: fixed;
-    }}
-
+)
     .block-container {{
         background-color: rgba(255, 255, 255, 0.88);
 st.markdown("""
