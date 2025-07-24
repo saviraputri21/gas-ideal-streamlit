@@ -1,12 +1,18 @@
 import streamlit as st
 
-# Tambahkan CSS untuk latar belakang terang dengan gambar bertema kimia
+# Tambahkan CSS untuk latar belakang cerah bertema kimia
 st.markdown(
     """
     <style>
-    /* Latar belakang dengan gambar terang bertema kimia */
     .stApp {
-        background-image: url('https://cdn.pixabay.com/photo/2020/02/18/18/41/laboratory-4865982_1280.jpg');
+        background-image: url('import streamlit as st
+
+# Tambahkan CSS untuk latar belakang cerah bertema kimia
+st.markdown(
+    """
+    <style>
+    .stApp {
+        background-image: url('https://images.app.goo.gl/GPJqBsfiVTrMtF3K7');
         background-size: cover;
         background-repeat: no-repeat;
         background-attachment: fixed;
@@ -14,35 +20,69 @@ st.markdown(
         color: black;
     }
 
-    /* Container konten transparan terang */
     .block-container {
-        background-color: rgba(255, 255, 255, 0.85); /* transparan putih terang */
+        background-color: rgba(255, 255, 255, 0.85);
         padding: 2rem;
         border-radius: 15px;
-        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        box-shadow: 0 0 10px rgba(0,0,0,0.15);
     }
 
-    /* Warna teks tetap hitam agar cocok dengan latar terang */
     h1, h2, h3, h4, h5, h6, p, label, .markdown-text-container {
-        color: #111111;
+        color: #002b5c; /* biru gelap agar kontras di latar terang */
     }
 
-    /* Style input */
     .stTextInput > div > div > input,
     .stNumberInput input {
         background-color: #ffffff;
         color: #000;
-        border: 1px solid #ccc;
+        border: 1px solid #aaa;
     }
 
-    /* Panel info, success, error */
     .stAlert {
-        background-color: rgba(255,255,255,0.9);
+        background-color: rgba(240, 248, 255, 0.8);
         border-left: 5px solid #0074D9;
-        color: #111;
+        color: #000;
     }
 
-    /* Tombol utama */
+    button[kind="primary"] {
+        background-color: #0074D9;
+        color: white;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+        color: black;
+    }
+
+    .block-container {
+        background-color: rgba(255, 255, 255, 0.85);
+        padding: 2rem;
+        border-radius: 15px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.15);
+    }
+
+    h1, h2, h3, h4, h5, h6, p, label, .markdown-text-container {
+        color: #002b5c; /* biru gelap agar kontras di latar terang */
+    }
+
+    .stTextInput > div > div > input,
+    .stNumberInput input {
+        background-color: #ffffff;
+        color: #000;
+        border: 1px solid #aaa;
+    }
+
+    .stAlert {
+        background-color: rgba(240, 248, 255, 0.8);
+        border-left: 5px solid #0074D9;
+        color: #000;
+    }
+
     button[kind="primary"] {
         background-color: #0074D9;
         color: white;
@@ -300,6 +340,12 @@ elif menu == "🧾 Breakdown Perhitungan":
 # ================================
 # 👥 Tentang Kami
 # ================================
+if menu == "🏠 Home":
+    ...
+elif menu == "📊 Dashboard":
+    ...
+elif menu == "🧾 Breakdown Perhitungan":
+    ...
 elif menu == "👥 Tentang Kami":
     st.title("👥 Tentang Kami")
     st.markdown("""
@@ -335,4 +381,3 @@ elif menu == "👥 Tentang Kami":
    - Savira Putri Pramudita (2460514)
    
     """)
-
