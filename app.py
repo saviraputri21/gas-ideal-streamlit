@@ -45,13 +45,13 @@ if menu == "🏠 Home":
         """
         <style>
         .main {
-            background-color: #E0F2F1;  /* Hijau pastel lembut */
+            background-color: #D9CBB3;  /* krem */
             padding: 20px;
             border-radius: 10px;
         }
     
         h1 {
-            color: #004D40;
+            color: #D9CBB3;
         }
     
         </style>
