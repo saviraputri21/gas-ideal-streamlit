@@ -39,7 +39,7 @@ st.markdown(
 
     button[kind="primary"] {
         background-color: #0074D9;
-        color: white;
+        color: blue;
     }
     </style>
     """,
@@ -72,8 +72,7 @@ if menu == "🏠 Home":
 
     Aplikasi ini membantu menghitung salah satu variabel jika tiga lainnya diketahui.
     """)
-    st.info("Pilih halaman di sidebar untuk menggunakan kalkulator atau melihat grafik hubungan volume & tekanan.")
-
+    
 # ================================
 # 📊 DASHBOARD PAGE
 # ================================
@@ -210,12 +209,6 @@ gas_ideal_calculator()
 # 🧾 BREAKDOWN PERHITUNGAN PAGE
 # ================================
 menu = st.sidebar.selectbox(...)
-if menu == "🏠 Home":
-    ...
-elif menu == "📊 Dashboard":
-    ...
-elif menu == "🧾 Breakdown Perhitungan":
-    ...
 elif menu == "🧾 Breakdown Perhitungan":
     st.title("🧾 Breakdown Perhitungan Gas Ideal PV = nRT")
     st.markdown("Masukkan **3 variabel** dan kosongkan **1 variabel** dengan mengisi angka 0 (nol). Sistem akan menampilkan langkah perhitungannya.")
@@ -295,12 +288,6 @@ elif menu == "🧾 Breakdown Perhitungan":
 # ================================
 # 👥 Tentang Kami
 # ================================
-if menu == "🏠 Home":
-    ...
-elif menu == "📊 Dashboard":
-    ...
-elif menu == "🧾 Breakdown Perhitungan":
-    ...
 elif menu == "👥 Tentang Kami":
     st.title("👥 Tentang Kami")
     st.markdown("""
