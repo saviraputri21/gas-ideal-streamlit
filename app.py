@@ -39,6 +39,43 @@ menu = st.sidebar.selectbox("📂 Pilih Halaman", ["🏠 Home", "📊 Dashboard"
 # ================================
 if menu == "🏠 Home":
     st.title("🧪 Aplikasi Kalkulator Gas Ideal")
+        <!DOCTYPE html>
+    <html>
+    <head>
+      <title>Kalkulator Gas Ideal</title>
+      <style>
+        .app-container {
+          background-color: #E0F2F1; /* Hijau pastel lembut */
+          padding: 30px;
+          border-radius: 12px;
+          max-width: 700px;
+          margin: auto;
+          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        body {
+          background-color: #B2DFDB; /* Warna latar belakang umum (lebih gelap) */
+          font-family: sans-serif;
+        }
+      </style>
+    </head>
+    <body>
+      <div class="app-container">
+        <h1>🧪 Aplikasi Kalkulator Gas Ideal</h1>
+        <h2>Persamaan Gas Ideal</h2>
+        <p>[ PV = nRT ]</p>
+        <ul>
+          <li><strong>P</strong> : Tekanan (atm)</li>
+          <li><strong>V</strong> : Volume (L)</li>
+          <li><strong>n</strong> : Jumlah mol</li>
+          <li><strong>R</strong> : 0.0821 L·atm/mol·K</li>
+          <li><strong>T</strong> : Suhu (K)</li>
+        </ul>
+        <p>Aplikasi ini membantu menghitung salah satu variabel jika tiga lainnya diketahui.</p>
+      </div>
+    </body>
+    </html>
+
     st.markdown(r"""
     ## Persamaan Gas Ideal
     \[
