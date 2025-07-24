@@ -195,7 +195,7 @@ elif menu == "🧾 Breakdown Perhitungan":
             ### Tim Pengembang Aplikasi Kalkulator Gas Ideal
         
         
-            Selamat datang di PV-nRTin Aja! 💻🧪
+            Selamat datang di PV-nRTin Aja! 
             
             Sebuah platform kalkulator gas ideal yang dibuat untuk mahasiswa, pelajar, atau pejuang tugas akhir—yang sering berkutat dengan rumus legendaris PV = nRT 😵‍💫
             Di dunia teknik dan sains, perhitungan gas ideal itu penting banget, tapi jujur aja... kadang ribet 😅.
