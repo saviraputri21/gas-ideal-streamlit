@@ -39,26 +39,6 @@ menu = st.sidebar.selectbox("📂 Pilih Halaman", ["🏠 Home", "📊 Dashboard"
 # ================================
 if menu == "🏠 Home":
     st.title("🧪 Aplikasi Kalkulator Gas Ideal")
-    import streamlit as st
-       # Atur warna latar belakang halaman dengan CSS
-    st.markdown(
-        """
-        <style>
-        .main {
-            background-color: #D9CBB3;  /* krem */
-            padding: 20px;
-            border-radius: 10px;
-        }
-    
-        h1 {
-            color: #D9CBB3;
-        }
-    
-        </style>
-        """,
-        unsafe_allow_html=True
-    )
-
     # Konten aplikasi
     st.markdown("<div class='main'>", unsafe_allow_html=True)
     
