@@ -51,24 +51,7 @@ if menu == "🏠 Home":
     - **R** : 0.0821 L·atm/mol·K  
     - **T** : Suhu (K)  
     """)
-    st.markdown("Aplikasi ini membantu menghitung salah satu variabel jika tiga lainnya diketahui.")
-
-    st.markdown("</div>", unsafe_allow_html=True)
-    st.markdown(r"""
-        ## Persamaan Gas Ideal
-        \[
-        **PV = nRT**
-        \]
-    
-    Keterangan
-    - P : Tekanan (atm)  
-    - V : Volume (L)  
-    - n : Jumlah mol  
-    - R : 0.0821 L·atm/mol·K  
-    - T : Suhu (K)
-
-    Aplikasi ini membantu menghitung salah satu variabel jika tiga lainnya diketahui.
-    """)
+   
 # ================================
 # 📊 DASHBOARD PAGE
 # ================================
