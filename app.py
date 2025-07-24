@@ -243,11 +243,11 @@ elif menu == "🧾 Breakdown Perhitungan":
     R = 0.0821
     
     if st.button("🔍 Tampilkan Proses Perhitungan"):
-    kosong = sum([P == 0, V == 0, n == 0, T == 0])
+        kosong = sum([P == 0, V == 0, n == 0, T == 0])
 
-    if kosong != 1:
+        if kosong != 1:
         st.error("Isi **3 variabel**, kosongkan **1** saja dengan 0!")
-    else:
+        else:
         st.subheader("📘 Langkah-Langkah Perhitungan")
         st.latex("PV = nRT")
 
