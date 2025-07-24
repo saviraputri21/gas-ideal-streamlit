@@ -246,10 +246,10 @@ elif menu == "🧾 Breakdown Perhitungan":
         kosong = sum([P == 0, V == 0, n == 0, T == 0])
 
         if kosong != 1:
-        st.error("Isi **3 variabel**, kosongkan **1** saja dengan 0!")
+            st.error("Isi **3 variabel**, kosongkan **1** saja dengan 0!")
         else:
-        st.subheader("📘 Langkah-Langkah Perhitungan")
-        st.latex("PV = nRT")
+            st.subheader("📘 Langkah-Langkah Perhitungan")
+            st.latex("PV = nRT")
 
         if P == 0:
             st.markdown("### Diketahui:")
