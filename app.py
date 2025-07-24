@@ -8,7 +8,6 @@ st.markdown(
     <style>
     .stApp {
         background-color: #A8E6CF;
-        background-image: url('https://cdn.pixabay.com/photo/2017/08/30/07/52/chemistry-2696850_1280.png'); /* Struktur atom/kimia */
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
@@ -37,16 +36,16 @@ menu = st.sidebar.selectbox("📂 Pilih Halaman", ["🏠 Home", "📊 Dashboard"
 
 # Warna background per halaman
 if menu == "🏠 Home":
-    bg_color = "#e6f2ff"  # merah muda
+    bg_color = "#FFFDD0"  # krem
     bg_image = "url('https://cdn.pixabay.com/photo/2017/03/19/03/13/chemistry-2156826_1280.jpg')"
 elif menu == "🧮 Kalkulator":
-    bg_color = "#f0fff0"  # hijau muda
+    bg_color = "#FFFDD0"  # krem
     bg_image = "url('https://cdn.pixabay.com/photo/2017/04/04/17/03/lab-2200497_1280.jpg')"
 elif menu == "📊 Dashboard":
-    bg_color = "#fff0f5"  # pink muda
+    bg_color = "#FFFDD0"  # krem
     bg_image = "url('https://cdn.pixabay.com/photo/2020/07/30/16/46/molecules-5450375_1280.jpg')"
 elif menu == "🧾 Breakdown Perhitungan":
-    bg_color = "#fffff0"  # ccoklat tua
+    bg_color = "#FFFDD0"  # krem
     bg_image = "url('https://cdn.pixabay.com/photo/2020/05/03/06/42/formula-5120370_1280.jpg')"
     st.markdown(f"""
     <style>
