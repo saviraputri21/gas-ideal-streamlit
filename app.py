@@ -1,58 +1,5 @@
 import streamlit as st
 
-# Tambahkan CSS untuk tampilan biru muda + gambar tema kimia
-st.markdown(
-    """
-    <style>
-    /* Latar belakang halaman */
-    .stApp {
-        background-color: #e6f2ff; /* biru muda */
-        background-image: url('https://cdn.pixabay.com/photo/2017/03/19/03/13/chemistry-2156826_1280.jpg');
-        background-size: cover;
-        background-attachment: fixed;
-        background-position: center;
-        color: #002b5c;
-    }
-
-    /* Kotak utama konten */
-    .block-container {
-        background-color: rgba(255, 255, 255, 0.88);
-        padding: 2rem;
-        border-radius: 20px;
-        box-shadow: 0 0 10px rgba(0,0,0,0.2);
-    }
-
-    /* Judul dan teks */
-    h1, h2, h3, h4, h5, h6, p, label {
-        color: #002b5c; /* Biru teknik */
-    }
-
-    /* Input */
-    .stTextInput > div > div > input,
-    .stNumberInput input {
-        background-color: #ffffff;
-        color: #000000;
-        border: 1px solid #aaa;
-        border-radius: 6px;
-    }
-
-    /* Tombol */
-    button[kind="primary"] {
-        background-color: #0074D9;
-        color: white;
-        border-radius: 8px;
-    }
-
-    /* Alert box */
-    .stAlert {
-        background-color: rgba(240, 248, 255, 0.9);
-        border-left: 5px solid #0074D9;
-    }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
-
 # ================================
 # 🌈 Background Biru Muda + gradasi merah muda 
 # ================================
@@ -88,6 +35,20 @@ st.set_page_config(page_title="Kalkulator Gas Ideal", page_icon="🧪", layout="
 # Sidebar Navigasi
 menu = st.sidebar.selectbox("📂 Pilih Halaman", ["🏠 Home", "📊 Dashboard", "🧮 Kalkulator", "🧾 Breakdown Perhitungan","👥 Tentang Kami"])
 
+# Warna background per halaman
+if menu == "🏠 Home":
+    bg_color = "#e6f2ff"  # merah muda
+    bg_image = "url('https://cdn.pixabay.com/photo/2017/03/19/03/13/chemistry-2156826_1280.jpg')"
+elif menu == "🧮 Kalkulator":
+    bg_color = "#f0fff0"  # hijau muda
+    bg_image = "url('https://cdn.pixabay.com/photo/2017/04/04/17/03/lab-2200497_1280.jpg')"
+elif menu == "📊 Dashboard":
+    bg_color = "#fff0f5"  # pink muda
+    bg_image = "url('https://cdn.pixabay.com/photo/2020/07/30/16/46/molecules-5450375_1280.jpg')"
+elif menu == "🧾 Breakdown Perhitungan":
+    bg_color = "#fffff0"  # krem muda
+    bg_image = "url('https://cdn.pixabay.com/photo/2020/05/03/06/42/formula-5120370_1280.jpg')"
+    
 # ================================
 # 🏠 HOME PAGE
 # ================================
