@@ -233,7 +233,7 @@ elif menu == "🧾 Breakdown Perhitungan":
                 - T = {T} K  
                 - V = {V} L  
                 """)
-                st.latex("P = \\frac{{nRT}}{{V}}")
+                st.latex("P = \\frac{nRT}{V}")
                 P = (n * R * T) / V
                 st.latex(f"P = \\frac{{{n} × {R} × {T}}}{{{V}}} = {P:.3f} \\ atm")
                 st.success(f"✅ Tekanan (P) = {P:.3f} atm")
@@ -247,7 +247,7 @@ elif menu == "🧾 Breakdown Perhitungan":
                 - T = {T} K  
                 - P = {P} atm  
                 """)
-                st.latex("V = \\frac{{nRT}}{{P}}")
+                st.latex("V = \\frac{nRT}{P}")
                 V = (n * R * T) / P
                 st.latex(f"V = \\frac{{{n} × {R} × {T}}}{{{P}}} = {V:.3f} \\ liter")
                 st.success(f"✅ Volume (V) = {V:.3f} liter")
@@ -261,7 +261,7 @@ elif menu == "🧾 Breakdown Perhitungan":
                 - R = 0.0821 L·atm/mol·K  
                 - T = {T} K  
                 """)
-                st.latex("n = \\frac{{PV}}{{RT}}")
+                st.latex("n = \\frac{PV}{RT}")
                 n = (P * V) / (R * T)
                 st.latex(f"n = \\frac{{{P} × {V}}}{{{R} × {T}}} = {n:.3f} \\ mol")
                 st.success(f"✅ Jumlah mol (n) = {n:.3f} mol")
@@ -275,71 +275,7 @@ elif menu == "🧾 Breakdown Perhitungan":
                 - n = {n} mol  
                 - R = 0.0821 L·atm/mol·K  
                 """)
-                st.latex("T = \\frac{{PV}}{{nR}}")
-                T = (P * V) / (n * R)
-                st.latex(f"T = \\frac{{{P} × {V}}}{{{n} × {R}}} = {T:.2f} \\ K")
-                st.success(f"✅ Suhu (T) = {T:.2f} K")
-
-    st.caption("Breakdown ditampilkan berdasarkan persamaan PV = nRT dengan konstanta R = 0.0821 L·atm/mol·K")
-    if st.button("Tampilkan Breakdown"):
-        zero_count = sum([P == 0, V == 0, n == 0, T == 0])
-        if zero_count != 1:
-            st.error("Tolong kosongkan tepat satu variabel (isi dengan 0), dan isi 3 variabel lainnya dengan nilai > 0.")
-        else:
-            st.subheader("🔍 Langkah-Langkah Perhitungan")
-
-            if P == 0:
-                st.latex("PV = nRT")
-                st.markdown(f"""
-                Nilai yang diketahui:
-                - n = {n} mol  
-                - R = 0.0821 L·atm/mol·K  
-                - T = {T} K  
-                - V = {V} L  
-                """)
-                st.latex("P = \\frac{{nRT}}{{V}}")
-                P = (n * R * T) / V
-                st.latex(f"P = \\frac{{{n} × {R} × {T}}}{{{V}}} = {P:.3f} \\ atm")
-                st.success(f"✅ Tekanan (P) = {P:.3f} atm")
-
-            elif V == 0:
-                st.latex("PV = nRT")
-                st.markdown(f"""
-                Nilai yang diketahui:
-                - n = {n} mol  
-                - R = 0.0821 L·atm/mol·K  
-                - T = {T} K  
-                - P = {P} atm  
-                """)
-                st.latex("V = \\frac{{nRT}}{{P}}")
-                V = (n * R * T) / P
-                st.latex(f"V = \\frac{{{n} × {R} × {T}}}{{{P}}} = {V:.3f} \\ liter")
-                st.success(f"✅ Volume (V) = {V:.3f} liter")
-
-            elif n == 0:
-                st.latex("PV = nRT")
-                st.markdown(f"""
-                Nilai yang diketahui:
-                - P = {P} atm  
-                - V = {V} L  
-                - R = 0.0821 L·atm/mol·K  
-                - T = {T} K  
-                """)
-                st.latex("n = \\frac{{PV}}{{RT}}")
-                n = (P * V) / (R * T)
-                st.latex(f"n = \\frac{{{P} × {V}}}{{{R} × {T}}} = {n:.3f} \\ mol")
-                st.success(f"✅ Jumlah mol (n) = {n:.3f} mol")
-
-            elif T == 0:
-                st.latex("PV = nRT")
-                st.markdown(f"""
-                Nilai yang diketahui:
-                - P = {P} atm  
-                - V = {V} L  
-                - n = {n} mol  
-                - R = 0.0821 L·atm/mol·K  
-                """)
-                st.latex("T = \\frac{{PV}}{{nR}}")
+                st.latex("T = \\frac{PV}{nR}")
                 T = (P * V) / (n * R)
                 st.latex(f"T = \\frac{{{P} × {V}}}{{{n} × {R}}} = {T:.2f} \\ K")
                 st.success(f"✅ Suhu (T) = {T:.2f} K")
