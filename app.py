@@ -4,7 +4,7 @@ import streamlit as st
 # 🌈 Background biru
 # ================================
 st.markdown(
-    """,
+""",
     # Warna latar per halaman
 if menu == "🏠 Home":
     bg_color = "#A8E6CF"  # hijau pastel
