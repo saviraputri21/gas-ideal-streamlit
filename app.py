@@ -4,78 +4,28 @@ import streamlit as st
 # 🌈 Background biru
 # ================================
 st.markdown(
-    """
-    # Warna latar per halaman
-if menu == "🏠 Home":
-    bg_color = "#A8E6CF"  # hijau pastel
-elif menu == "📊 Dashboard":
-    bg_color = "#DCE775"  # kuning kehijauan
-elif menu == "🧮 Kalkulator":
-    bg_color = "#FFF9C4"  # kuning lembut
-elif menu == "🧾 Breakdown Perhitungan":
-    bg_color = "#FFECB3"  # krem keemasan
-elif menu == "👥 Tentang Kami":
-    bg_color = "#F8BBD0"  # pink muda
-st.markdown(
-    f"""
-    <style>
-st.markdown("""
-    <style>
-    /* Ubah warna latar belakang keseluruhan */
+  <style>
     .stApp {
-        background-color: #E0F2F1; /* Hijau pastel lembut */
-    }
-    </style>
-""", unsafe_allow_html=True)
-        background-color: {bg_color};
-        background-size: contain;
-        background-repeat: repeat;
-        background-position: center;
-        background-attachment: fixed;
-)
-    .block-container {{
-        background-color: rgba(255, 255, 255, 0.88);
-st.markdown("""
-        <style>
-        .main {
-            padding: 2rem;
-            background-color: #E0F2F1;
-            border-radius: 10px;
-        }
-        </style>
-    """, unsafe_allow_html=True)
+    background-color: #A8E6CF;
+    background-size: contain;
+    background-repeat: repeat;
+    background-position: center;
+    background-attachment: fixed;
+   }
+        
+ .block-container {
+ background-color: rgba(255, 255, 255, 0.88);
+  padding: 2rem;
+border-radius: 15px;
+ box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
     
-        }}
-    
-        h1, h2, h3, h4, h5, h6, p, label, .markdown-text-container {{
-            color: #000000;
-        }}
-        </style>
-        """,
-        unsafe_allow_html=True
-    )
-        <style>
-        .stApp {
-            background-color: #A8E6CF;
-            background-size: contain;
-            background-repeat: repeat;
-            background-position: center;
-            background-attachment: fixed;
-        }
-    
-        .block-container {
-            background-color: rgba(255, 255, 255, 0.88);
-            padding: 2rem;
-            border-radius: 15px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.2);
-        }
-
-        h1, h2, h3, h4, h5, h6, p, label, .markdown-text-container {
-            color: #000000; /* black */
-        }
-        </style>
-        """,
-        unsafe_allow_html=True
+h1, h2, h3, h4, h5, h6, p, label, .markdown-text-container {
+color: #000000; /* black */
+  }
+</style>
+ """,
+ unsafe_allow_html=True
     
 # Konfigurasi halaman
 st.set_page_config(page_title="Kalkulator Gas Ideal", page_icon="🧪", layout="centered")
