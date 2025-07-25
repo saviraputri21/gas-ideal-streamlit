@@ -1,41 +1,12 @@
 import streamlit as st
-import streamlit as st
-
 # ================================
-# 🌈 Background Biru Muda 
+# 🌈 Background Biru 
 # ================================
 st.markdown(
     """
-    st.markdown(
-    """
     <style>
     .stApp {
-        background: linear-gradient(to bottom right, #e0f7fa, #fce4ec),
-                    url('https://cdn.pixabay.com/photo/2017/08/30/07/52/chemistry-2696850_1280.png');
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-        background-attachment: fixed;
-        backdrop-filter: blur(2px);
-    }
-
-    .block-container {
-        background-color: rgba(255, 255, 255, 0.88);
-        padding: 2rem;
-        border-radius: 15px;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.15);
-    }
-
-    h1, h2, h3, h4, h5, h6, p, label, .markdown-text-container {
-        color: #004d40;
-    }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
-
-    <style>
-    .stApp {
+        background: linear-gradient(to bottom right, #FFF5E1, #EED9C4);
         background-color: #A8E6CF;
         background-image: url('https://cdn.pixabay.com/photo/2017/08/30/07/52/chemistry-2696850_1280.png'); /* Struktur atom/kimia */
         background-size: contain;
