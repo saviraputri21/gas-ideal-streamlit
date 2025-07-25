@@ -1,56 +1,61 @@
 import streamlit as st
+import streamlit as st
 
 # ================================
-# 🌈 Background biru
+# 🌈 Background Biru Muda 
 # ================================
 st.markdown(
-  <style>
+    """
+    <style>
     .stApp {
-    background-color: #A8E6CF;
-    background-size: contain;
-    background-repeat: repeat;
-    background-position: center;
-    background-attachment: fixed;
-   }
-        
- .block-container {
- background-color: rgba(255, 255, 255, 0.88);
-  padding: 2rem;
-border-radius: 15px;
- box-shadow: 0 0 10px rgba(0,0,0,0.2);
-}
-    
-h1, h2, h3, h4, h5, h6, p, label, .markdown-text-container {
-color: #000000; /* black */
-  }
-</style>
- """,
- unsafe_allow_html=True
-    
+        background-color: #A8E6CF;
+        background-image: url('https://cdn.pixabay.com/photo/2017/08/30/07/52/chemistry-2696850_1280.png'); /* Struktur atom/kimia */
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed;
+    }
+
+    .block-container {
+        background-color: rgba(255, 255, 255, 0.88);
+        padding: 2rem;
+        border-radius: 15px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+
+    h1, h2, h3, h4, h5, h6, p, label, .markdown-text-container {
+        color: #004d40; /* biru kehijauan */
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 # Konfigurasi halaman
 st.set_page_config(page_title="Kalkulator Gas Ideal", page_icon="🧪", layout="centered")
 
 # Sidebar Navigasi
 menu = st.sidebar.selectbox("📂 Pilih Halaman", ["🏠 Home", "📊 Dashboard", "🧮 Kalkulator", "🧾 Breakdown Perhitungan","👥 Tentang Kami"])
-    
+
 # ================================
 # 🏠 HOME PAGE
 # ================================
 if menu == "🏠 Home":
     st.title("🧪 Aplikasi Kalkulator Gas Ideal")
-    # Konten aplikasi
-    st.markdown("<div class='main'>", unsafe_allow_html=True)
-    st.markdown("### Persamaan Gas Ideal")
-    st.markdown("**[ PV = nRT ]**")
-    st.markdown("""
-    **Keterangan:**
-    - **P** : Tekanan (atm)  
-    - **V** : Volume (L)  
-    - **n** : Jumlah mol  
-    - **R** : 0.0821 L·atm/mol·K  
-    - **T** : Suhu (K)  
+    st.markdown(r"""
+    ## Persamaan Gas Ideal
+    \[
+    **PV = nRT**
+    \]
+    
+    Keterangan
+    - P : Tekanan (atm)  
+    - V : Volume (L)  
+    - n : Jumlah mol  
+    - R : 0.0821 L·atm/mol·K  
+    - T : Suhu (K)
+
+    Aplikasi ini membantu menghitung salah satu variabel jika tiga lainnya diketahui.
     """)
-   
 # ================================
 # 📊 DASHBOARD PAGE
 # ================================
