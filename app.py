@@ -19,8 +19,6 @@ elif menu == "👥 Tentang Kami":
 st.markdown(
     f"""
     <style>
-    import streamlit as st
-
 st.markdown("""
     <style>
     /* Ubah warna latar belakang keseluruhan */
