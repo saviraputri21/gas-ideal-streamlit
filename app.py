@@ -6,9 +6,7 @@ st.markdown(
     """
     <style>
     .stApp {
-        background: linear-gradient(to bottom right, #FFF5E1, #EED9C4);
         background-color: #A8E6CF;
-        background-image: url('https://cdn.pixabay.com/photo/2017/08/30/07/52/chemistry-2696850_1280.png'); /* Struktur atom/kimia */
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
@@ -33,7 +31,7 @@ st.markdown(
 st.set_page_config(page_title="Kalkulator Gas Ideal", page_icon="🧪", layout="centered")
 
 # Sidebar Navigasi
-menu = st.sidebar.selectbox("📂 Pilih Halaman", ["🏠 Home", "📊 Dashboard", "🧮 Kalkulator", "🧾 Breakdown Perhitungan","👥 Tentang Kami"])
+menu = st.sidebar.selectbox("📂 Pilih Halaman", ["🏠 Home", "📊 Dashboard", "🧮 Kalkulator Gas Ideal","👥 Tentang Kami"])
 
 # ================================
 # 🏠 HOME PAGE
@@ -149,90 +147,14 @@ elif menu == "👥 Tentang Kami":
     """)
 
 # ================================
-# 🧮 KALKULATOR PAGE
-# ================================
-elif menu == "🧮 Kalkulator":
-    st.title("🧮 Kalkulator Gas Ideal (PV = nRT)")
-    st.markdown("Masukkan **3 variabel** dan kosongkan **1 variabel** dengan mengisi angka 0 (nol).")
-
-    # Input user
-    P = st.number_input("Tekanan (P) dalam atm", value=0.0)
-    V = st.number_input("Volume (V) dalam liter", value=0.0)
-    n = st.number_input("Jumlah mol (n)", value=0.0)
-    T = st.number_input("Suhu (T) dalam Kelvin", value=0.0)
-    R = 0.0821
-
-    if st.button("Hitung"):
-        if P == 0 and V > 0 and n > 0 and T > 0:
-            P = (n * R * T) / V
-            st.success(f"Tekanan (P) = {P:.3f} atm")
-        elif V == 0 and P > 0 and n > 0 and T > 0:
-            V = (n * R * T) / P
-            st.success(f"Volume (V) = {V:.3f} liter")
-        elif n == 0 and P > 0 and V > 0 and T > 0:
-            n = (P * V) / (R * T)
-            st.success(f"Jumlah mol (n) = {n:.3f} mol")
-        elif T == 0 and P > 0 and V > 0 and n > 0:
-            T = (P * V) / (n * R)
-            st.success(f"Suhu (T) = {T:.2f} K")
-        else:
-            st.error("Isi *tepat satu* variabel dengan 0 dan sisanya dengan nilai valid (> 0).")
-
-    st.caption("Menggunakan konstanta gas R = 0.0821 L·atm/mol·K")
-
-def gas_ideal_calculator():
-    R = 0.0821  # atm·L/mol·K (bisa ditambah opsi satuan lain)
-    print("=== KALKULATOR GAS IDEAL (PV = nRT) ===")
-    print("Masukkan nilai, ketik 'x' untuk variabel yang ingin dicari.")
-
-    # Input dari user
-    P = input("Tekanan (P) dalam atm: ")
-    V = input("Volume (V) dalam liter: ")
-    n = input("Mol (n): ")
-    T = input("Suhu (T) dalam Celsius: ")
-
-    # Ubah suhu ke Kelvin
-    if T != 'x':
-        T = float(T) + 273.15
-
-    # Hitung berdasarkan variabel yang hilang
-    if P == 'x':
-        V = float(V)
-        n = float(n)
-        P = (n * R * T) / V
-        print(f"Tekanan (P) = {P:.3f} atm")
-
-    elif V == 'x':
-        P = float(P)
-        n = float(n)
-        V = (n * R * T) / P
-        print(f"Volume (V) = {V:.3f} liter")
-
-    elif n == 'x':
-        P = float(P)
-        V = float(V)
-        n = (P * V) / (R * T)
-        print(f"Mol (n) = {n:.3f} mol")
-
-    elif T == 'x':
-        P = float(P)
-        V = float(V)
-        n = float(n)
-        T = (P * V) / (n * R)
-        print(f"Suhu (T) = {T - 273.15:.2f} °C (atau {T:.2f} K)")
-
-    else:
-        print("Semua variabel terisi. Tidak ada yang perlu dihitung.")
-
-# ================================
-# 🧾 Breakdown Perhitungan 
+# 🧮 Kalkulator Gas Ideal
 # ================================
 if menu == "🏠 Home":
     ...
 elif menu == "📊 Dashboard":
     ...
-elif menu == "🧾 Breakdown Perhitungan":
-    st.title("🧾 Breakdown Perhitungan Gas Ideal")
+elif menu == "🧮 Kalkulator Gas Ideal":
+    st.title("🧮 Kalkulator Gas Ideal")
     st.markdown("Masukkan **3 variabel**, kosongkan **1 variabel** dengan angka `0`.")
     
     P = st.number_input("Tekanan (P) dalam atm", value=0.0)
